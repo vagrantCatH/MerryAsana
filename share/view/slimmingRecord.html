@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>瘦身记录分享</title>
+		<link rel="stylesheet" href="../css/slimmingRecord.css" />
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js"></script>
+	</head>
+<body> 
+	<script id="tmpo" type="text/html">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+			<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<div class="main_container" id="model">
+			<div class="main_top">
+				<!-- 头像 -->
+				<div class="top-bg">
+					<div class="power_num">
+						<i class="fa fa-bolt"></i>能量值：{{data.EnergyValue}}
+					</div>
+					<div class="user-info" style="background-image: url(<%= data.HeadURL %>);">
+						<div class="tag-name">{{data.Label}}</div>
+					</div>
+					<div class="follow_user">
+						<i class="fa fa-plus"></i>关注
+					</div>
+				</div>
+				<!-- 名字 -->
+				<div class="user-name">
+					<span class="user_span span_name">{{data.Name}}</span>
+                            <span  class="user_span span_logo" id="abc">
+						     <img src="../img/icon_male.png" />
+					        </span>
+                           <span class="user_span span_logo" id="cba"> 
+						   <img src="../img/icon_female.png" /> 
+					        </span>
+					      <span class="user_span span_logo">
+						  <img src="../img/identifying_user.png" />
+					</span>
+					<span class="user_span logo_grade">M{{data.Mlevel}}</span>
+				</div>
+				<!-- 关注与粉丝 -->
+				<div class="public_span">
+					<span class="user_span follow_span">
+						关注<span class="span_tag">{{data.FollowCount}}</span>
+					</span>
+					<span class="user_span"> 
+						粉丝<span class="span_tag">{{data.FansCount}}</span>
+					</span>
+				</div>
+				<!-- 个人心情 -->
+				<div class="public_span">
+					<span class="mood">{{data.Notice}}</span>
+				</div>
+			</div>
+				<!-- 动态信息，动态拿数据时循环这一块 -->
+	    <div class="dynamic_container">
+			<ul class="dynamic_ul">
+					<div class="tag_div">
+					  <span class="dynamic_tag">
+						瘦身日记录
+					  </span>
+				    </div>
+				{{if data.abc.data }}
+				{{each data.abc.data  value index }}
+				 {{if value.FirstImgUrl !== ""}}
+					<li>
+						<div class="left_time">
+							<span class="big_font">
+								{{value.day}}
+							</span>
+							<span class="small_font">{{value.end}}月</span>
+							<div class="bottom_font">{{value.start}}</div>
+						</div>
+						<div class="right_intro">
+							<div class="intro_img" id="intro_img" style="background-image: url({{value.FirstImgUrl}});"></div>
+							<div class="xinxi">体重:{{value.BodyWeight}}kg&nbsp;三围:{{value.BWH}}</div>
+							<div class="yinshi">{{value.SharedContent }}</div>
+						</div>
+						<div class="xian_img" style="background-image:url(../img/slimmingRecord/分割线.png);"></div>
+					</li>
+					{{else if value.FirstImgUrl == ""}}
+					<li>
+						<div class="left_time">
+							<span class="big_font">
+								{{value.day}}
+							</span>
+							<span class="small_font">{{value.end}}月</span>
+							<div class="bottom_font">{{value.start}}</div>
+						</div>
+						<div class="right_intro">
+							<div class="intro_img" id="intro_img" style="background-image: url({{value.FirstImgUrl}});"></div>
+							<div class="xinxi">体重:{{value.BodyWeight}}kg&nbsp;三围:{{value.BWH}}</div>
+							<div class="yinshi">{{value.SharedContent }}</div>
+						</div>
+						<div class="xian_img" style="background-image:url(../img/slimmingRecord/分割线.png);"></div>
+					</li>
+					{{/if}}
+						{{/each}}
+			{{else}}
+				<li></li>
+			{{/if}}
+					
+				<div class="see-more" id="xiazai1">
+					查看更多
+				</div>
+			</div>
+		</div>
+	  </ul>	
+	  </script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/slimmingRecord.js" ></script>
+</html>

@@ -1,0 +1,49 @@
+*,table,tr,td{
+	font-family: "微软雅黑";
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+/**
+ * 头部
+ */
+.top-container{
+	padding: .06rem .05rem;
+	font-size: .13rem;
+	position: absolute;
+	width: 97%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(255,255,255,.5);
+	
+}
+.top-container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.left{
+	position: absolute;
+	left: .05rem;
+	top: 50%;
+	-webkit-transform: translateX(0) translateY(-50%);
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+}
+.right{
+	width: auto;
+	padding: .02rem .1rem;
+	border: 1px solid #ff507c;
+	float: right;
+	border-radius: .09rem;
+	background: #FF507C;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.right:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset; 
+}

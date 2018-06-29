@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>诚邀您加入</title>
+		<link rel="stylesheet" href="../css/joinE.css" />
+		<link rel="stylesheet" href="../css/lib/layer.css" />
+		<script src="../js/lib/layer.js"></script>
+		
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+	</head>
+	<body>
+		<!-- 头 -->
+		<div class="top-container" >
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga 
+			</div>
+				<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<!-- 中间 --> 
+		<div class="main-container" id="model">
+				 <!-- 遮罩层 -->
+				 <div class="mask"  @click="hide">
+						<img class="one1"  @click="hide" src="../img/100.png" alt="">
+					 </div>
+					 <div class="mask1"  @click="hide1">
+						<img class="one1" @click="hide" src="../img/200.png" alt="">
+					 </div>		
+					
+			<!-- 头像 -->
+			<div class="backdorp">
+				<div class="top-bg">
+					<div class="user-info" :style="{backgroundImage: bgUrl}">
+						<div class="tag-name">梦想合伙人</div>
+					</div>
+				</div>
+				<!-- 名字 -->
+				<div class="user-name">
+					<span class="user_span span_name">{{userName}}</span>
+					<span v-if="sex == 1" class="user_span span_logo">
+						<img src="../img/icon_female.png" />
+					</span>
+					<span v-else-if="sex == 0" class="user_span span_logo">
+						<img src="../img/icon_male.png" />
+					</span>
+					<span class="user_span span_logo">
+						<img src="../img/hudie.png" />
+					</span>
+					<span class="user_span logo_grade">M{{level}}</span>
+				</div>
+			</div>	
+			<!-- 中下部 -->
+			<div class="bottom-container">
+				<!-- 宣传语 -->
+				<div class="slogan-container">
+						<img class="one" @click="show()" src="../img/100.png" alt="">
+						<img class="two" @click="showo()"    src="../img/200.png" alt="">
+						<img class="three" src="../img/最终版本_04.png" alt="">
+						<img class="ye" src="../img/hua.png" alt="">
+				</div>
+                     <!-- 表单 -->
+				<form id="regForm">
+						<div class="call"> 请输入手机号,并验证获取</div>
+						<div class="form_public">
+							<span class="user_span form_logo">
+								<img src="../img/sj_icon.png" />
+							</span>
+							<input name="phone" type="tel" v-model="registerForm.phone" placeholder="请输入手机号 	" />
+						</div>
+						<div class="form_public">
+							<span class="user_span form_logo">
+								<img class="st" src="../img/sr_icon.png" />
+							</span>
+							<input name="randCode" class="randCode" v-model="registerForm.code" type="number" placeholder="验证码" />
+							<span class="code_font" v-on:click="getRandCode($event.currentTarget)">
+								获取验证码
+							</span>
+						</div>
+						</div> 
+				</form>
+				
+			<div class="bottom-btn" v-on:click="doForm"  @click="submit()" :disabled="isDisable">
+		 			<img  v-if="res !== 0" id="bianhuan" src="../img/icon.png" />
+					<img  v-else id="bianhuan" src="../img/ylq.png" />
+				</div>
+			</div>
+				<div class="width"> 
+					<img class="caption" src="../img/最终版本_06.jpg" alt="">
+					<img class="bottom_hua" src="../img/最终版本_07.jpg" alt="">
+				</div>
+				
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/lib/axios.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/join.js" ></script>
+</html>

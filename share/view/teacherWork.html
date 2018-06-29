@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>名师工作坊分享页</title>
+		<link rel="stylesheet" href="../css/lib/swiper-4.1.6.min.css" />
+		<link rel="stylesheet" href="../css/teacherWork.css" />
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/lib/layer.css">
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+		 
+	</head>
+	<body>
+			<scirpt id="tmp" type="text/html">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga 
+			</div>
+			<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="teacher_top">
+				<!-- 中 -->
+			<div class="player">
+			<video  src="{{data.TheoryVideoUrl}}" controls="" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" preload="auto"></video> 
+            <div class="video_img1" id="video_img1" style="background-image: url({{data.ReviewVideoList.CourseShowImg}});"></div>
+            <div class="video_start" id="video_start">
+			<img src="../img/courseShare/courseplay_suspend.png" >
+           </div>	
+            <!-- 控制条-->
+            <div class="controls" id="controls">
+                <!-- 开关-->
+                <i class="switch fa fa-play" id="switch" style="font-size: 15px;" ></i>
+                <!-- 进度条-->
+                <span class="curr-time" id="curr-time">00:00</span>
+                <div class="progress">
+                    <div class="curr-progress" id="curr-progress"></div>
+                </div>
+                <!-- 时间-->
+                <div class="time">
+                    <span class="total-time" id="total-time">00:00</span>
+                </div>
+                <!-- 全屏-->
+                <span class="extend fa fa-arrows-alt" style="font-size: 15px;"></span>
+            </div>
+        </div>
+			<div class="middle_container">
+				<div class="video_introduce">
+				</div>
+			</div>
+				<div class="teacher_info">
+					<div class="teacher_public">
+						<div class="teacher_title">
+							<img src="../img/teacherWork/teacherBg.png" /> 
+							预告
+						</div>
+						<div class="teacher_name">
+							{{data.ReviewVideoList.CourseTitle}}
+						</div>
+					</div>
+					<!-- 教师轮播 -->
+					<div class="swiper-container" id="teacher">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+									{{if data.TeacherInfo}}
+									{{each data.TeacherInfo  value  index}}
+							  {{if index == 0}}
+								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
+								<div class="teacher_box">
+									<div class="name">{{value.Name}}</div>
+									<div class="job">{{value.Appellation}}</div> 
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
+								<div class="teacher_box">
+									<div class="name">黄老师</div>
+									<div class="job">高级瑜伽导师</div>
+								</div>
+							</div>
+						</div>
+					</div>
+							{{ else if index == 1}}
+							<span></span>
+							{{ else if index == 2}}
+							<div class="swiper-slide">
+								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
+								<div class="teacher_box">
+									<div class="name">{{value.Name}}</div>
+									<div class="job">{{value.Appellation}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				      {{/if}}
+					{{/each}}
+					    {{else}}
+					   <li></li>
+					{{/if}}
+					<table class="teacher_table">
+						<tr>
+							<td  >
+								时间：
+							</td>
+							<td class="shij" id="time">
+								
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								地点：
+							</td>
+							<td class="shij">
+								{{data.ClassAddress}}
+							</td>
+						</tr>
+						<tr>
+							<td>
+								费用：
+							</td>
+							<td>
+								<span class="teacher_price feiy">{{data.RegisteryFee}}元</span>
+								<span class="sign_up" id="sign">立即报名</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="teacher_bottom">
+				<div class="teacherInfo_top">
+					<span>课程简介</span>
+				</div>
+				<div class="teacherInfo_container">
+					<div class="infoPublic">
+							<iframe id="mainiframe" width="350px" height="600" src="{{data.DetailUrl}}" frameborder="0" scrolling="auto"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/swiper-4.1.6.min.js" ></script>
+	<script type="text/javascript" src="../js/teacherWork.js" ></script>
+	<script type="text/javascript" src="../js/lib/layer.js" ></script>
+</html>

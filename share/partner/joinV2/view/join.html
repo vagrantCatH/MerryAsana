@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>诚邀您加入</title>
+		<link rel="stylesheet" href="../css/injoin_out.css?v=20180629" />
+		<link rel="stylesheet" href="../css/lib/layer.css?v=20180629" />
+		<script src="../js/lib/layer.js"></script>
+		
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+	</head>
+	<body>
+		<!-- 头 -->
+		<!-- 中间 --> 
+		<div class="main-container" id="model">
+			
+			 <!-- 遮罩层 -->
+			 <div class="mask" >
+				    <img class="one1" src="../img/xian@2x.png" alt="">
+					<img class="two" src="../img/tanchuang@2x.png" alt="">
+					<span class="shiy" @click="hide"></span>
+					<span class="share"></span>
+				 </div>
+				 <div class="top-container" >
+						<div class="left">
+							我家瑜伽&nbsp;Home&nbsp;Yoga
+						</div>
+							<div class="right" id="xiazai">
+							下载APP
+						</div>
+					</div>
+			<!-- 头像 -->
+			<div class="backdorp">
+				<div class="top-bg">
+					<div class="user-info" :style="{backgroundImage: bgUrl}">
+						<div class="tag-name">梦想合伙人</div>
+					</div>
+				</div>
+				<!-- 名字 -->
+				<div class="user-name">
+					<span class="user_span span_name">{{userName}}</span>
+					<span v-if="sex == 1" class="user_span span_logo">
+						<img src="../img/icon_female.png" />
+					</span>
+					<span v-else-if="sex == 0" class="user_span span_logo">
+						<img src="../img/icon_male.png" />
+					</span>
+					<span class="user_span span_logo"> 
+						<img src="../img/hudie.png" />
+					</span>
+					<span class="user_span logo_grade">M{{level}}</span>
+				</div>
+			</div>	
+			<!-- 中下部 -->
+			<div class="bottom-container">
+				<!-- 宣传语 -->
+				<div class="slogan-container">
+					<div class="slogan">
+						恭喜您获得 <span class="Underline">美俪分享卡</span> ，接受邀请，您将成功加入"我家瑜伽"项目卡
+					</div>
+				</div>
+				<!-- 福利卡 -->
+				<div class="card">
+                        <div class="content">
+							<div class="console" v-for="item in list">	
+									<div class="project_l" >{{item.Name}}</div>
+									<div class="project_r" >价值{{item.Price}}元</div>
+							</div>
+						</div>
+				</div>
+				<div class="prompt">仅限新客户每人领取一次，每次预约一个项目</div>
+				<!-- 分割线 -->
+				<div class="Dividing "> 
+					<div class="line"> </div>
+				</div>	
+				<div class="call"> 请输入手机号,并验证获取</div>
+				<div class="huaban">
+                     <!-- 表单 -->
+				<form id="regForm">
+						<div class="form_public">
+							<span class="user_span form_logo">
+								<img src="../img/account.png" />
+							</span>
+							<input name="phone" type="tel" v-model="registerForm.phone" placeholder="请输入手机号 	" />
+						</div>
+						<div class="form_public">
+							<span class="user_span form_logo">
+								<img src="../img/rand.png" />
+							</span>
+							<input name="randCode" class="randCode" v-model="registerForm.code" type="number" placeholder="验证码" />
+							<span class="code_font" v-on:click="getRandCode($event.currentTarget)">
+								获取验证码
+							</span>
+						</div>
+						</div> 
+				</form>
+				</div>
+			<div class="bottom-btn" v-on:click="doForm"  @click="submit()" :disabled="isDisable">
+					<img  v-if="res !== 0" id="bianhuan" src="../img/button.png" />
+					<img  v-else id="bianhuan" src="../img/ylq.png" />
+				</div>
+				<div class="width"> 
+					<img class="caption" src="../img/组16.png" alt="">
+					<img class="bottom_hua" src="../img/dahua.png" alt="">
+				</div>
+		</div>
+		</div>
+	
+		
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js?v=20161020" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js?v=20161020" ></script>
+	<script type="text/javascript" src="../js/lib/axios.min.js?v=20161020" ></script>
+	<script type="text/javascript" src="../js/public.js?v=20161020" ></script>
+	<script type="text/javascript" src="../js/join.js?v=20161020" ></script>
+</html>

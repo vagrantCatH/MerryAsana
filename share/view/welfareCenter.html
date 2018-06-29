@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>福利中心分享</title>
+		<link rel="stylesheet" href="../css/lib/swiper-4.1.6.min.css" />
+		<link rel="stylesheet" href="../css/welfareCenter.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+		<script id="tmp" type="text/html">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+			<div class="right" id="xiazai">
+				下载APP
+			</div> 
+		</div>
+		<div class="main-container">
+			<!-- 轮播图 -->
+			<div class="swiper-container" id="adv">
+				<div class="swiper-wrapper">
+			    {{if data.ProDetailImgUrl }}
+				{{each data.ProDetailImgUrl  value index }}
+					<div class="swiper-slide">
+						<img src="{{value}}" />
+					</div>
+				{{/each}}
+			{{else}}
+				<li></li>
+			{{/if}}
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- 主内容 -->
+			<div class="welfare_container">
+				<!-- 福利名字 -->
+				<div class="welfare_title">
+					<div class="title_container"> 
+						<span class="welspan welleft">{{data.ProName}}</span>
+						{{if data.ExchangeCash == 0}}
+						<span class="welspan welright">{{data.ExchangePoint}}能量值</span>
+						{{else if data.ExchangeCash !== 0}}
+						<span class="welspan welright">{{data.ExchangePoint}}能量值 + {{data.ExchangeCash}}元</span>
+						{{/if}}
+					</div>
+					<div class="welPrice">
+						市场参考价：<span class="priceFont">￥{{data.ReferPrice}}.00</span>
+					</div>
+				</div>
+				<!-- 华丽的分割线 -->
+				<div class="dividing"></div>
+				<!-- 详细介绍 -->
+				<div class="welfare_content">
+					<div class="content">
+						<iframe id="mainiframe" width="350px" height="600" src="{{data.DetailPath}}"  frameborder="0" scrolling="auto"></iframe>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<!-- 底部工具栏 -->
+		<div class="footer">
+			<span class="footerSpan footer_left">
+				单价：<span class="footerPrice">{{data.ExchangePoint}}能量值</span>
+				{{if data.ExchangeCash == 0}}
+				<span></span> 
+				{{else if data.ExchangeCash !== 0}}
+				<span> + {{data.ExchangeCash}}元</span>
+		    	{{/if}}
+			</span>
+			<span class="footerSpan footer_right" id="xiazai1">
+				立即兑换
+			</span>
+		</div>
+		</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/swiper-4.1.6.min.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/welfareCenter.js" ></script>
+</html>

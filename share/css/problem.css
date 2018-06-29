@@ -1,0 +1,82 @@
+@import url("public.css");
+.top_question{
+	margin: 0 auto;
+	margin-top: .1rem;
+	width: 90%;
+	height: .8rem;
+}
+.title_top{
+	height: .35rem;
+	margin-bottom: -.2rem;
+}
+.da{
+	width: .14rem;
+	height: .14rem;
+	font-size: .11rem;
+	color: #ff4470;	
+	margin-right: .1rem;
+	border: 2px solid #ff4470;
+	border-radius: 2px;
+	float: left;  
+	text-align: center;
+}
+.title{
+	font-size: .14rem;
+	color: #111111;
+}
+/*点赞头像*/
+.good_container{
+	float: left;
+	margin-top: .15rem;
+	list-style: none;
+	text-align: center;
+}
+.good_container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.good_container>li{
+	float: left;
+	width: .22rem;
+	height: .22rem;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: .05rem;
+	margin-right: .03rem;
+}
+.good_container>li:nth-of-type(8n){
+	margin-right: 0;
+}
+.renshu{
+	margin-left: 6px;
+	float: left;
+	font-size: .1rem;
+	line-height: .6rem;
+	color: #989898;
+}
+.shijian{
+	float: right;
+	font-size: .1rem;
+	line-height: .6rem;
+	color: #b1b1b1;
+}
+/*华丽的分割线*/
+.fgxian{ 
+	width: 100%;
+	padding-top:.55rem ;
+	margin-bottom: .2rem;
+}
+.fgxian1{
+	width: 90%;
+	height: 1px;
+	margin: auto;
+	background-color: #dddddd;
+}
+.title_top>span{
+	font-size: .13rem;
+	float:left;
+}
+

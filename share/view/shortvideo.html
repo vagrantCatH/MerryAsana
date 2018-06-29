@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport"   content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+     <title>视频分享页</title>
+     <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.7.0/skins/default/aliplayer-min.css" />
+     <link rel="stylesheet" href="../css/video.css" />
+     <script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.7.0/aliplayer-h5-min.js"></script>
+     <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    </head>
+    <body>
+     <!-- <script id="tmp" type="text/html">  -->
+		<!-- 头 -->
+		<div class="top-container" >
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+				<div class="right" id="xiazai">
+				下载APP
+			</div>
+        </div>
+        <div class="control">
+            <div  class="prism-player ab" id="J_prismPlayer" style="position: absolute"></div>
+            <div class="abc"> 
+                <img  class="left1"src="../img/u=291184781,1179952589&fm=200&gp=0.jpg" alt="">
+                <div class="sname">小小小小小小小小~结巴</div>
+                <div class="right2">+关注</div> 
+            </div>
+            <div class="dier"></div>
+        </div>
+       
+    </body>
+    <script>
+$(document).ready(function(){
+    $.ajax({
+       type:'get',
+       url:'http://test.wojiayujia.cn/v1/vod/aliyun/auth',
+       data:{},
+       dataType:'json',
+       success:function(info){
+           var str = JSON.parse(info.data)
+           console.log(str)
+           var AccessKeySecret = str.Credentials.AccessKeySecret;
+           var AccessKeyId = str.Credentials.AccessKeyId;
+           var SecurityToken = str.Credentials.SecurityToken;
+           console.log(AccessKeySecret)
+ 
+    var player = new Aliplayer({
+        id: 'J_prismPlayer',
+        width: '100%',
+        height:'98%',
+        x5_video_position:"top",
+        playsinline:!0,
+        x5_type:true,
+        autoplay:!0,
+        // x5_video_position:top,
+        //支持播放地址播放,此播放优先级最高
+        // source : '播放url',
+        //播放方式二：点播用户推荐
+        // vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
+        // playauth : '',
+        // cover: 'http://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png',            
+        // 播放方式三：仅MPS用户使用
+        // vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
+        // accId: '',
+        // accSecret: '',
+        // stsToken: '',
+        // domainRegion: '',
+        // authInfo: '',
+        //播放方式四：使用STS方式播放
+        vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
+        accessKeyId: AccessKeyId,
+        securityToken: SecurityToken,
+        accessKeySecret: AccessKeySecret,
+        },function(player){
+            console.log('播放器创建好了。')
+       });
+       }
+       });
+    });
+    </script>
+</html>
+
+
+  

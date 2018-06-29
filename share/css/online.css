@@ -1,0 +1,89 @@
+@import url("public.css");
+.main-container{
+	/* margin-top: .4rem; */
+	border-top: 1px solid #F4F4F4;
+}
+/**
+ * 上
+ */
+.top_container{
+	padding: .09rem .09rem 0px .09rem;
+}
+.course_title{
+	font-size: .2rem;
+	font-weight: 500;
+	margin-bottom: .1rem;
+}
+
+.other_info{
+	font-size: .1rem;
+	color: #B1B1B1;
+	margin-top: .06rem;
+}
+.courseNum{
+	border-right: .03rem solid #B1B1B1;
+	padding-right: .09rem;
+	margin-right: .1rem;
+}
+.more_font{
+	float: right;
+	color: #b1b1b1;
+	margin-right: .05rem;
+}
+
+/*图片*/
+.couse_img{
+	width: 3rem;
+	height: 1.3rem;
+	border-radius: .1rem;
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.new_tag{
+	width: .6rem;
+    height: .17rem;
+    border-top-right-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    background-color: #ff507c;
+    font-size: 10px;
+	position: absolute;
+	padding: 0.04rem 0.02rem 0 0.02rem;
+    top: .1rem;
+    padding-top: 0.04rem;
+    text-align: center;
+    color: #ffffff;
+}
+.jianjie{
+	margin-top: .1rem;
+	font-size: .12rem;
+	padding-left: 0.03rem;
+	padding-right: 0.01rem;
+	color: #111111;
+}
+.ab{
+	margin-top: .02rem;
+	width: 3rem;
+	height: .15rem;
+	font-size: .11rem;
+}
+.ab1{
+	float: right;
+	color:#fc4470;;
+}
+.fengexian{
+	padding-top: .1rem;
+	width: 3rem;
+	height: 0.01rem;
+	text-align: center;
+	margin-bottom: .1rem;
+}
+.fengexian1{
+	margin: auto;
+	width: 2.6rem;
+	height: 1px;
+	background-color: #b1b1b1;
+	
+}

@@ -1,0 +1,135 @@
+@import url("public.css");
+body{
+	background: url(../img/yezishu.png);
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size:100% 100%;  
+	background-size:100% 100%;  
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.top-banner{
+	width: 80%;
+	margin: 0 auto;
+	margin-top:40%;
+	background-color: #ffffff;
+	height: 3.5rem;
+	border-radius: 10px;
+}
+
+/*头像*/
+.top-bg{
+	border-radius: 10px;
+	margin: 0 auto;
+	background: url(../img/top_bg.png) no-repeat;
+	background-size: 100% 100%;
+	height: 1rem;
+	text-align: center;
+	position: relative;
+}
+.user-info{
+	width: .7rem;
+	height: .7rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	border: .03rem solid #FFFFFF;
+	margin: 0 auto;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.user-header{
+	position: relative;
+}
+.user-header>img{
+	width: 100%;
+	border-radius: 50%;
+	border: .03rem solid #FFFFFF;
+}
+.tag-name{
+	position: absolute;
+	font-size: .12rem;
+	width: 150%;
+	padding: 0 .05rem;
+	border-radius: 1rem;
+	left: 50%;
+	bottom: -0.2rem;
+	-webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.power_num{
+	position: absolute;
+	font-size: .11rem;
+	top: 160%;
+	right: 0.8rem;
+	-webkit-transform: translateX(0) translateY(-50%);
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+    /*border: 1px solid #66ccff;*/
+    color: #Fc4470;
+    padding: .02rem 0.1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.power_num>.fa{
+	font-size: .14rem;
+	margin-right: .03rem;
+}
+.power_num>img{
+	padding-top: 5px;
+    height: .1rem;
+}
+.solid{
+	margin: auto;
+	height: 1rem;
+	width: 70%;
+	border-bottom:1px solid #DDDDDD ;
+	margin-bottom:.2rem;
+}
+/*信息栏*/
+.xxk{
+	margin: auto;
+	width: 80%;
+	height: .5rem;
+	
+}
+.xxk_left{
+	width: 40%;
+	height: .5rem;
+	/*background-color: red;*/
+	position: relative;
+	float: left;
+}
+.xxk_left>img{
+	position: absolute;
+    height: .15rem;
+    
+}
+.xx{
+	padding-left: .2rem;
+	font-size: .13rem;
+	line-height: .15rem;
+}
+.xx1{
+	font-size: .1rem;
+	margin-top: .05rem;
+	color: #b1b1b1;
+}
+.xxk_right{
+	float: right;
+	width: 40%;
+	height: .5rem;
+	position: relative;
+}
+.xxk_right>img{
+	position: absolute;
+    height: .15rem;
+    
+}

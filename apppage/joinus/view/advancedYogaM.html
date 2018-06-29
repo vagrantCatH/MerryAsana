@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta content="telephone=no" name="format-detection">
+		<meta name="description" content="">
+		<title>高级瑜伽老师</title>
+		<link rel="stylesheet" href="../css/specialist.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+	</head>
+	<body>
+		<div class="main-container">
+			<img src="../img/高级瑜伽老师/1-门店瑜伽老师_02.jpg" alt="">
+			<img src="../img/高级瑜伽老师/1-门店瑜伽老师_03.jpg" alt="">
+			<img src="../img/高级瑜伽老师/1-门店瑜伽老师_04.jpg" alt="">
+		</div>
+		<img  class="xian" src="../img/11-文案_05.jpg" alt="">
+		<ul class="teacher_container">
+			<li data-type="9" onclick="btnAction('111999')">
+				<div class="teacher_header" style="background-image: url(../img/kf_icon@2x.png);"></div>
+				<div class="teacher_online">
+					<span class="online_img">
+						<img src="../img/椭圆5.png" />
+					</span>
+					<span class="online_font">
+					 陈先生
+					</span>
+				</div>
+			</li>
+			<li  data-type="9" onclick="btnAction('182869')">
+				<div class="teacher_header"  style="background-image: url(../img/kf_icon@2x.png);"></div>
+				<div class="teacher_online">
+					<span class="online_img">
+						<img src="../img/椭圆5.png" />
+					</span>
+					<span class="online_font">
+						周小姐
+					</span>
+				</div>
+			</li>
+			<li  data-type="9" onclick="btnAction('107435')">
+				<div class="teacher_header"   style="background-image: url(../img/kf_icon@2x.png);"></div>
+				<div class="teacher_online">
+					<span class="online_img">
+						<img src="../img/椭圆5.png" />
+					</span>
+					<span class="online_font">
+						黄小姐
+					</span>
+				</div>
+			</li>
+		</ul>
+
+		<script>
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+			
+								  function setupWebViewJavascriptBridge(callback) {
+								  if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+								  if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+								  window.WVJBCallbacks = [callback];
+								  var WVJBIframe = document.createElement('iframe');
+								  WVJBIframe.style.display = 'none';
+								  WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+								  document.documentElement.appendChild(WVJBIframe);
+								  setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+								  }
+								  
+								  function btnAction(jumpId){
+								  if(isiOS){
+								  setupWebViewJavascriptBridge(function (bridge){
+															   bridge.callHandler('H5JumpToDetails', {jumpType:"9",jumpId:jumpId}, function(response) {})
+															})
+								  }else{
+									window.imagelistner.H5JumpToChatting("9",jumpId)
+								  }
+								  }
+			</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/weixin.js" ></script>
+
+</html>

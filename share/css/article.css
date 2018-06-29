@@ -1,0 +1,80 @@
+@import url("public.css");
+.main-container{
+	margin-top: .4rem;
+	border-top: 1px solid #F4F4F4;
+}
+/**
+ * 上
+ */
+.top_container{
+	padding: .09rem;
+	width: 2.7rem;
+	padding-left: .15rem;
+    /* background: #66ccff; */
+    margin: 0 auto;
+}
+.course_title{
+	font-size: .135rem;
+    font-weight: 600;
+    margin-bottom: .1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.other_info{
+	font-size: .1rem;
+	color: #B6B6B6;
+	margin-top: .06rem;
+}
+.courseNum{
+	border-right: .1px solid #dddddd;
+	padding-right: .09rem;
+	margin-right: .1rem;
+}
+.more_font{
+	float: right;
+	color: #b1b1b1;
+	margin-right: .05rem;
+}
+
+/*图片*/
+.couse_img{
+	width: 2.6rem;
+	height: 1.3rem;
+	border-radius: .1rem;
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.new_tag{
+	font-size: .1rem;
+    position: absolute;
+    right: -.03rem;
+    top: -.03rem;
+}
+/*文章*/
+.ab{
+	margin-top: .1rem;
+}
+.wz{
+    width: 2.6rem;
+    font-size: .11rem;
+    color: #111111;
+    line-height: .2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.fzxian{
+	padding-left: 10%;
+	 
+}
+.fzxian1{
+	width: 2.5rem;
+    height: 1px;
+    background-color: #dddddd;
+    border-bottom: .1rem;
+}

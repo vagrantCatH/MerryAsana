@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>问答主页</title>
+		<link rel="stylesheet" href="../css/problem.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+			<script id="tmp" type="text/html">
+      <div class="top_question">
+			{{if data}}
+			{{each data value index}} 
+		  	 <div class="title_top" data-id="{{value.YqId}}">
+		  	 	<div class="da">答</div>
+		  	 	<div class="title">{{value.Question}}</div>
+				</div>
+				{{if AnswersHeadportrait == null}}
+				<span></span> 
+				{{ else if AnswersHeadportrait !== null}}
+				{{each AnswersHeadportrait value index }}
+		         <ul class="good_container">
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0);"></li>
+						<li style="background-image: url({{value}});"></li>
+					</ul>
+					<div class="renshu">等{{value.Answers}}人参与</div>
+					{{/each}}
+					{{/if}}
+					<div class="shijian">{{value.time}}</div>
+					<!--华丽的分割线-->
+					<div class="fgxian">
+						<div class="fgxian1"> </div>
+					</div>
+					{{/each}}
+		{{else}}
+	   <span></span>
+	   {{/if}}
+		  </div>
+		</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/problem.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+</html>

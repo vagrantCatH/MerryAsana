@@ -1,0 +1,132 @@
+@import url("public.css");
+.main-container{
+	margin-top: .4rem;
+	border-top: 1px solid #F4F4F4;
+	padding-bottom: .4rem;
+}
+.star_top{
+	padding: .09rem;
+}
+.star_img{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 1.5rem;
+	border-radius: .1rem;
+}
+.star_info{
+	font-size: .13rem;
+	margin: .05rem 0;	
+}
+.star_title{
+	margin-top: .09rem;
+}
+.star_span{
+	display: inline-block;
+}
+.star_tag{
+	font-size: .1rem;
+	background-color: #FF507C;
+	color: #FFFFFF;
+	padding: .05rem .09rem;
+	border-top-right-radius: .1rem;
+	border-bottom-right-radius: .1rem;
+	border-bottom-left-radius: .1rem;
+}
+.name_tag{
+	font-size: .15rem;
+	margin-left: .2rem;
+}
+.star_author{
+	padding: .05rem;
+	text-align: right;
+	color: #6B6B6B;
+	letter-spacing: 3px;
+}
+/**
+ * 活动简介
+ */
+.activity_container{
+	padding: .09rem;
+	font-size: .15rem;
+	background-color: #F8F8F8;
+}
+.activity_top:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.activity_top>span{
+	display: inline-block;
+	color: #545454;
+}
+.activity_name{
+	float: left;
+}
+.activity_font{
+	float: right;
+	font-size: .18rem;
+	vertical-align: top;
+}
+.activity_content{
+	color: #545454;
+}
+/**
+ * 行程列表
+ */
+.trip_ul{
+	list-style: none;
+}
+.trip_ul>li{
+	font-size: .12rem;
+	padding: .09rem;
+	color: #BBBBBB;
+	position: relative;
+}
+.trip_ul>li:after{
+	position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.trip_month{
+	margin-right: .1rem;
+}
+.trip_mark>span{
+	margin-right: .05rem;
+}
+/**
+ * 查看更多
+ */
+.see-more{
+	position: fixed;
+	bottom: .1rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+	width: 50%;
+	border-radius: .05rem;
+	font-size: .15rem;
+	padding: .05rem .09rem;
+	background-color: #FF507C;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.see-more:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset; 
+}

@@ -1,0 +1,83 @@
+@import url("public.css");
+.clearfix{
+        zoom: 1;                     /*IE6*/
+    }
+.clearfix:after{
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+    }
+body{
+	background: url(../img/home_page/bgtp.png) no-repeat;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size:100% 100%;  
+    background-size:100% 100%;  
+	background-attachment: fixed;
+	/* position:relative; */
+}
+.topsize{
+	font-family: PingFangSC-Regular;
+    font-size: .23rem;
+    font-weight: normal;
+    line-height: 2rem;
+    color: #f8f8f8;
+    text-align: center;
+    opacity: 0;
+}
+.lie{
+	list-style: none;
+    text-align: center;
+    overflow: auto;
+    margin-top: 1rem;
+}
+.lie1{
+	text-align: center;
+    float: left;
+    margin-bottom: .4rem;
+    background-image: url(../img/home_page/anbg.png);
+    position: relative;
+    background-size: 1rem .35rem;
+    margin-left: .4rem;
+    width: 1rem;
+    height: .35rem;
+    border-radius: 2rem;
+    font-size: .12rem;
+}
+.lie2{
+	text-align: center;
+    float: left;
+    margin-bottom: .7rem;
+    background-image: url(../img/home_page/anbg.png);
+    position: relative;
+    background-size: 1rem .35rem;
+    margin-left: .4rem;
+    width: 1rem;
+    height: .35rem;
+    border-radius: 2rem;
+    font-size: .12rem;
+}
+.lie1_z{
+	padding-top:8px;
+}
+.botom_b{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: .3rem;
+    background: #000000;
+    opacity: 0.5;
+    font-family: PingFangSC-Regular;
+    font-size: .2rem;
+    color: #f8f8f8;
+    text-align: center;
+    position: fixed;
+    right: -1px;
+    width: 100%;
+    bottom: 0px; 
+	}
+a {
+	 text-decoration:none;
+	 out-line: none;
+	color: #000000;
+	}

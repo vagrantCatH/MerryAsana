@@ -1,0 +1,109 @@
+@import url("public.css");
+.public_course,.public_starCourse{
+	padding: .09rem;
+	position: relative;
+}
+.public_course:after{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0); 
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+/**
+ * 名师工作坊
+ */
+.starCourse_ul{
+	margin: .09rem 0 0;
+	list-style: none;
+}
+.starCourse_ul>li{
+	margin-bottom: .1rem;
+	position: relative;
+	padding-bottom: .05rem;
+}
+.starCourse_ul>li:after{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.starCouse_img{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 1.5rem;
+	border-radius: .13rem;
+	position: relative;
+}
+.course_cover{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: .09rem;
+	background-color: rgba(0,0,0,.5);
+	color: #FFFFFF;
+	width: 94%;
+	font-size: .12rem;
+	border-bottom-left-radius: .13rem;
+	border-bottom-right-radius: .13rem;
+}
+.starCourse_name{
+	font-size: .12rem;
+	margin: .05rem 0;
+	display:-webkit-box;
+	overflow:hidden;
+	white-space:normal !important;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+	padding-left: .09rem;
+}
+.starCourse_address{
+	padding-left: .09rem;
+	font-size: .12rem;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.starCourse_name>span{
+	float: right;
+	padding-right: .1rem;
+	color: #545454;
+	font-size: .1rem;
+}
+.new_tag{
+	width: .6rem;
+    height: .15rem;
+    border-top-right-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    background-color: #ff507c;
+    font-size: .1rem;
+    position: absolute;
+    top: .15rem;
+    padding-top: 0.02rem;
+    text-align: center;
+    padding-bottom: 0.01rem;
+    color: #ffffff;
+}

@@ -1,0 +1,85 @@
+@import url("public.css");
+body{
+	background: url(../img/join/share-bg.jpg);
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size:100% 100%;  
+    background-size:100% 100%;  
+	background-attachment: fixed;
+}
+.main-container{
+	font-size: .3rem;
+	width: 82%;
+	top: 7%;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.main-container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*logo*/
+.logo_container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.HomeYoga_logo{
+	float: right;
+    width: .6rem;
+    margin: .02rem .09rem;
+}
+.HomeYoga_logo>img{
+	width: 100%;
+}
+/**
+ * 中部
+ */
+.middle_container{
+	padding-left: .1rem;
+}
+.yoga_container{
+	width: 1.2rem;
+	margin-bottom: .02rem;
+}
+.yoga_container>img{
+	width: 100%;
+}
+.middle-title{
+	width: 2rem;
+}
+.middle-title>img{
+	width: 100%;
+}
+.share_detail{
+	list-style: none;
+	font-size: .1rem;
+}
+.share_detail>li{
+	margin-bottom: .09rem;
+}
+.yoga_qrcode{
+	width: .7rem;
+}
+.yoga_qrcode>img{
+	width: 100%;
+}
+.bottom-btn{
+	width: .9rem;
+	position: absolute;
+	/*top: 132%;*/
+	bottom: -1.3rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    cursor: pointer;
+}
+.bottom-btn>img{
+	width: 100%;
+}

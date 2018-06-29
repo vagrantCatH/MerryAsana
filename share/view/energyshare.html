@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title> 能量值分享</title>
+		<link rel="stylesheet" href="../css/Energyshare.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js"></script>
+	</head>
+	<body>
+		<script id="tmp"  type="text/javascript">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+				<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<!--中间-->
+		<div class="top-banner"> <!--外边框--> 
+			<div class="top-bg">		<!-- 头像 -->
+				<div class="user-info" style="background-image: url({{data.HeadURL}});">
+					<div class="tag-name">{{data.Name}}</div>
+				</div>
+				<div class="power_num">
+					     <img src="../img/能量-2.png" alt="" />
+						<i class="fa fa-bolt"></i>能量值：{{data.EnergyValue}}
+					</div>
+			</div>
+			<!--华丽的分割线-->
+			<div class="solid">
+				<div class="solid1"></div> 
+			</div>
+			<!--信息栏--> 
+			<div class="xxk">
+				<div class="xxk_left">
+					<img src="../img/最近.png" alt="" />
+					 <div class="xx" id="time">{{data.abc}}</div>
+					 <div class="xx1">今日练习时长</div>
+				</div>
+				<div class="xxk_right">
+					<img src="../img/累计收益时间图标.png" alt="" />
+					 <div class="xx">{{data.Calories}}千卡</div>
+					 <div class="xx1">今日消耗卡路里</div>
+				</div>
+			</div>
+			<div class="xxk">
+				<div class="xxk_left">
+					<img src="../img/签到-2.png" alt="" />
+					 <div class="xx">{{data.ContinuousSignCount}}天</div>
+					 <div class="xx1">连续签到打卡天数</div>
+				</div>
+				<div class="xxk_right">
+					<img src="../img/排名.png" alt="" />
+					 <div class="xx">{{data.Rank}}</div>
+					 <div class="xx1">全国排名</div>
+				</div>
+			</div>
+		</div> 
+		</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/join.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/Energyshare.js" ></script>
+</html>

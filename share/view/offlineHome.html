@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>线下活动主页</title>
+		<link rel="stylesheet" href="../css/offlineHome.css" />
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css">
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+			<script id="tmp" type="text/html">
+			<div class="public_starCourse">
+					<ul class="starCourse_ul">
+						{{if  data}} 
+						{{each  data value index}}
+					<li class="al" data-id="{{value.ID}}">
+						<div class="starCouse_img" style="background-image: url({{value.Cover}});">
+							<div class="diamond_tag">
+								<div class="new_tag">{{value.Label}}</div>
+							</div>
+							<div class="course_cover">
+								{{value.Title}}
+							</div>
+						</div>
+						<div class="starCourse_name">
+							{{value.start}}<span>已预约{{value.BookedNumber}}人</span>
+						</div>
+						<div class="starCourse_address">
+							<span>
+							<i class="fa fa-map-marker"></i>
+						    </span>
+							{{value.Address}}
+						</div>
+					</li>
+					{{/each}}
+			{{else}}
+		   <span></span>
+		   {{/if}}
+					</ul>
+			</div>
+	    </div>
+		</div>
+		</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/offlineHome.js" ></script>
+</html>

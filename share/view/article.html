@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>文章主页</title>
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/article.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js"></script>
+	</head>
+	<body>
+	</body>
+	<script id="tmp" type="text/html">
+		<!-- 头 -->
+		<div class="top-container" >
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga 
+			</div> 
+				<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+			<div class="main-container" id="m1odel" >
+					{{if  data }}
+					{{each data  value index }}
+			<div class="top_container" data-id="{{value.ArtId}}">
+				<div class="course_title">{{value.Title}}</div>
+				<!--图片-->
+				<div class="tp">
+					<div class="couse_img" style="background-image: url({{value.ImgUrl}});">
+						{{if value.IsNew == "true"}}
+						<div clas1s="new_tag">
+								<img src="../img/course/new.png" />
+							</div>
+						{{else if value.IsNew == "false"}}
+						 <span></span>
+						{{/if}}
+						</div>
+				</div>
+				<!--内容-->
+				<div class="ab">
+					<div class="wz">{{value.Summary}}</div>
+				</div>
+				<div class="other_info">
+					<span class="courseNum">
+						美俪之声
+					</span>
+					<span class="courseSee">
+						美俪约会
+					</span>
+					<span class="more_font">
+						 {{value.Readers}}人阅读
+					</span>
+				</div>
+			</div> 
+			<div class="fzxian">
+				<div class="fzxian1"></div>
+			</div>
+			{{/each}}
+			{{else}}
+		   <span></span>
+		   {{/if}}
+	</script> 
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/article.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+</html>

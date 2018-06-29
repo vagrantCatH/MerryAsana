@@ -1,0 +1,174 @@
+@import url("public.css");
+.main-container{
+	/* margin-top: .4rem; */
+	/*border-top: 1px solid #F4F4F4;*/
+}
+/**
+ * 背景图片
+ */
+.rank_bg{
+	background: url(../img/energyRank/rankBg.png) no-repeat center center;
+	background-size: cover;
+	height: 2rem;
+}
+.rank_container{
+	padding: .09rem;
+}
+.rank_ul{
+	list-style: none;
+}
+.rank_ul>li{
+	position: relative;
+	font-size: .12rem;
+}
+.rank_info:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.rank_header{
+	margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: -15px;
+    width: 0.25rem;
+    height: .25rem;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    top: 7px;
+}
+.rank_name{
+	float: left;
+}
+.rank_name>span{
+	display: inline-block;
+}
+.rank_font{
+	/* font-size: .15rem; */
+	margin-top:12px; 
+	margin-left: 0.09rem;
+	background-image: linear-gradient(120deg, #FF507C 0%, #FF7800 100%);
+	-webkit-background-clip: text;         /* 规定背景的划分区域 */
+	-webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+}
+.rank_font1{
+	margin-left: .09rem;
+    margin: 10px;
+    color: #000000;
+}
+
+.colorFont{
+	background-image: linear-gradient(120deg, #FF507C 0%, #FF7800 100%);
+	-webkit-background-clip: text;         /* 规定背景的划分区域 */
+	-webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+}
+.rank_icon{
+	vertical-align: middle;
+	width: 0.15rem;
+}
+.rank_icon>img{
+	width: 100%;
+}
+.rank_num{
+	float: right;
+	padding-top: 0.12rem;
+	/* font-size: .15rem; */
+}
+.rank_level{
+	text-align: center;
+}
+.rank_level:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.rank_left{
+	float: left;
+	text-align: center;
+}
+.rank_right{
+	float: right;
+	text-align: center;
+}
+.level_line{
+	position: relative;
+}
+.level_font{
+	font-size: .1rem;
+    color: #FF507C;
+	position: relative;
+    top: -5px;
+}
+.rank_bottom{
+	width: 100%;
+	height: 5px;
+	background: #F8F8F8;
+	border-radius: .1rem;
+	position: relative;
+	
+}
+.rank_inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 100%;
+	background-color: rgb(255,217,1);
+	z-index: 1;
+	border-radius: .1rem;
+}
+.level_ul{
+	list-style: none;
+}
+.level_ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.level_ul>li{
+	float: left;
+	position: relative;
+	width: 33.33%;
+	text-align: center;
+}
+.abc{
+	background-image: url(../img/energyRank/frame_icon.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 12px;
+    /* padding-left: 0.07rem; */
+    font-size: .1rem;
+    color: #ffffff;
+    width: 1rem;
+    height: .2rem;
+    left: 10%;
+    /* padding-right: 45px; */
+    padding-top: 0.09rem;
+    background-size: 1rem;
+}
+.labal{
+	position: relative;
+    top: -21px;
+    width: .8rem;
+    height: .23rem;
+}
+.center{
+	vertical-align: middle;
+}
+.wenzi{
+	position: relative;
+	top: 1px;
+	left:1px;
+}
+.line{
+	width: 100%;
+}
+.line1{
+	margin: 0 auto;
+    margin-top: .3rem;
+    height: 1px;
+    width: 80%;
+    background-color: #f1f1f1;
+}

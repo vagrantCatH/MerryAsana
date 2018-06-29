@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>课程主页</title>
+		<link rel="stylesheet" href="../css/course.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script> 
+	</head>
+	<body>
+	<script id="tmp" type="text/html">
+		<div class="main-container">
+			<!-- 基础课程 -->
+			<div class="public_course">
+				<div class="public_title"> 
+					<span>基础课程</span>
+					<div class="more_course">
+						<span class="more_font" id="gengduo2">
+							更多
+						</span>
+						<span class="more_img">
+							<img src="../img/courseShare/more_icon.png" />
+						</span>
+					</div>
+				</div>
+				<ul class="course_ul">
+				{{if data.BaseCourseV2}}
+				{{each data.BaseCourseV2[0].List value index}}
+				{{if index < 2}}
+					<li class="jichu" data-id="{{value.AssociateId}}">
+						<div class="couse_img"   style="background-image: url({{value.ShowImgUrl}});">
+							<div class="new_tag">
+								{{if value.IsNew == "false"}}
+								<img src="" />
+								{{else if value.IsNew == "true"}}
+								<img src="../img/course/new.png" />
+								{{/if}}
+							</div>
+							<div class="video_start">
+								<img src="../img/courseShare/courseplay_suspend.png" >
+							</div> 
+						</div>
+						<div class="course_name">
+							{{value.Title}}
+						</div>
+						<div class="course_time">
+							2课时
+						</div>
+					</li>
+					{{else if  index > 2}}
+					<span></span>
+					{{/if}}
+					{{/each}}
+					{{else}}
+				   <span></span>
+				   {{/if}}
+				</ul>
+			
+			</div>
+			<!-- 明星课程 -->
+			<div class="public_course">
+				<div class="public_title">
+					<span>明星课程</span>
+					<div class="more_course">
+						<span class="more_font" id="gengduo1">
+							更多
+						</span>
+						<span class="more_img">
+							<img src="../img/courseShare/more_icon.png" />
+						</span>
+					</div>
+				</div>
+				<ul class="course_ul">
+						{{if data.StarCourseV2}}
+						{{each data.StarCourseV2[0].List value index}}
+						{{if index < 2}}
+					<li class="mingxing" data-id="{{value.AssociateId}}">
+						<div class="couse_img"   style="background-image: url({{value.ShowImgUrl}});">
+							<div class="diamond_tag">
+								<img src="../img/course/diamond.png" />
+							</div>
+							<div class="video_start">
+								<img src="../img/courseShare/courseplay_suspend.png" >
+							</div> 
+						</div>
+						<div class="course_name">
+							{{value.Title}}
+						</div>
+						<div class="course_time">
+							2课时
+						</div>
+					</li>
+					{{else if  index > 2}}
+					<span></span>
+					{{/if}}
+					{{/each}}
+					{{else}}
+				   <span></span>
+				   {{/if}}
+				</ul>
+			</div>
+			<!-- 名师工作坊 -->
+			<div class="public_starCourse">
+				<div class="public_title">
+					<span>名师工作坊</span>
+					<div class="more_course">
+						<span class="more_font" id="gengduo">
+							更多
+						</span>
+						<span class="more_img">
+							<img src="../img/courseShare/more_icon.png" />
+						</span>
+					</div>
+				</div>
+				<ul class="starCourse_ul">
+						{{if data.StarWorkShopV2}}
+						{{each data.StarWorkShopV2[0].List value index}}
+						{{if index < 2}}
+					<li class="mingshi"  data-id="{{value.AssociateId}}" >
+						<div class="starCouse_img" style="background-image: url({{value.ShowImgUrl}});">
+							<div class="diamond_tag">
+								<img src="../img/course/diamond.png" />
+							</div>
+							<div class="course_cover">
+								{{value.Title}}
+							</div>
+						</div>
+						{{if index == 0}}
+						<div class="starCourse_name">
+							活动时间：<span>{{abc.star}} {{value.ClassTime}}</span>
+						</div>
+						{{else if index == 1}}
+						<div class="starCourse_name">
+							活动时间：<span>{{abc.end}} {{value.ClassTime}}</span>
+						</div>
+						{{/if}}
+					</li>
+					{{else if  index > 2}}
+					<span></span>
+					{{/if}}
+					{{/each}}
+					{{else}}
+				   <span></span>
+				   {{/if}}
+				</ul>
+			</div>
+		</div>
+	</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/course.js" ></script>
+	<script type="text/javascript" src="../js/lib/template.js" ></script>
+</html>

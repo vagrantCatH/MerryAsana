@@ -1,0 +1,268 @@
+@import url("public.css");
+
+.clearfloat:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.clearfloat{
+   	zoom:1;
+}
+.main-container{
+	width: 3.2rem;
+	margin: 0 auto;
+	margin-top: .4rem;
+	border-top: 1px solid #F4F4F4;
+	padding-bottom: .4rem;
+}
+.project_top{
+	padding: .09rem;
+}
+.project_img{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 1.5rem;
+	border-radius: .1rem;
+}
+.project_name{
+	font-size: .14rem;
+	margin: .05rem 0 0;
+}
+/**
+ * 查看更多
+ */
+.see-more{
+	width: 48%;
+    margin-left: 25%;
+    margin-top: .1rem;
+    border-radius: .05rem;
+    font-size: .15rem;
+    padding: .05rem .09rem;
+    background-color: #FF507C;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+.see-more:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset; 
+}
+/*信息内容*/
+.fu{
+	display:inline-block;
+}
+.dengji{
+	margin-top: 10px;
+	height: .2rem;
+	font-size: 10px;
+}
+.dengji1{
+	background-color: #ff0000;
+	height: .15rem;
+	width: .15rem;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 4px;
+	float: left;
+}
+.dengji2{
+	margin-left: 10px;
+	font-size: 12px;
+	text-align: center;
+	color: #ff0000;
+	border-radius: 4px;
+	float: left;
+}
+.dengji3{
+	margin-left: 25px;
+	font-size: 10px;
+	color: #b1b1b1;
+	margin-bottom: 10px;
+}
+.jiage{
+	margin-left: 30px;
+	width: 1.2rem;
+	height: .65rem;
+	border-radius:10px;
+	position: relative;
+	float: left;
+	box-shadow: 0rem 0rem 0.05rem 0rem rgba(2, 0, 0, 0.24);
+	display:inline-block;
+}
+.jiage1{
+	margin: 10px 10px 0  0;
+	font-size: 10px;
+	float:right;
+	color: #b1b1b1;
+	
+}
+.jiage1>span{
+	text-decoration:line-through;
+}
+.xuanx{
+	height: .5rem;
+	font-size: 10px;
+    position: absolute;
+    top: .3rem;
+    right: .1rem;
+    font-weight:700;
+    vertical-align: bottom;
+}
+.xuanx>input{
+	float: left;
+	margin-right: 8px;
+	height:13px; vertical-align:text-top; margin-top:4px;
+}
+.ab{
+	font-size: 14px;
+	float: left;
+	padding-bottom: 2px;
+	margin-right: 5px;
+}
+.ab1{
+	margin-left: 5px;
+	font-size: 14px;
+	float: left;
+	margin-top:1px;
+	color: #fc4470;
+}
+.jiagea{
+	margin-left: 30px;
+	width: 1.2rem;
+	height: .65rem;
+	border-radius:10px;
+	position: relative;
+	float: left;
+	box-shadow: 0rem 0rem 0.05rem 0rem rgba(2, 0, 0, 0.24);
+	display:inline-block;
+}
+.jiagea1{
+	margin: 10px 10px 0  0;
+	font-size: 10px;
+	float:right;
+	color: #b1b1b1;
+}
+.xmm{
+	font-style: .12rem;
+	margin-left: 1rem;
+}
+.jiagea1>span{
+	text-decoration:line-through;
+}
+.xuanxa{
+	height: .5rem;
+	font-size: 10px;
+    position: absolute;
+	top: .3rem;
+	right: .1rem;
+    font-weight:700;
+    vertical-align: bottom;
+}
+.xuanxa>input{
+	float: left;
+	margin-left: 8px;
+	height:13px; vertical-align:text-top; margin-top:4px;
+}
+.aba{
+	font-size: 14px;
+	float: left;
+	padding-bottom: 2px;
+	margin-left: 5px;
+}
+.ab1a{
+	margin-left: 5px;
+	font-size: 14px;
+	float: left;
+	margin-top:1px;
+	color: #fc4470;
+}
+.yinc{
+	height: .64rem;	
+}
+/*项目选项*/
+.zhongj{
+	height: .3rem;
+	padding: 0 10px 0 10px;
+}
+.zuo{
+	font-size: 14px;
+	float: left;
+    margin-top: 5px;
+}
+.you{
+	float: right;
+	font-size: 25px;
+}
+.xian1{
+	width: 100%;
+}
+.xian{
+	margin: 0 auto;
+	background-color: #dddddd;
+    height: 1px;
+	width: 80%;
+}
+/**
+ * 底部工具栏
+ */
+.footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 99%;
+	height: .4rem;
+	line-height: .4rem;
+	background-color: rgba(255,255,255,.8);
+	padding-left: .05rem;
+	font-size: .12rem;
+	border-top: 1px solid #F4F4F4;
+}
+.footer:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.footerSpan{
+	display: inline-block;
+}
+.footer_left{
+	float: left;
+}
+.footerPrice{
+	color: #FF507C;
+}
+.footer_right{
+	float: right;
+	background-color: #FF507C;
+	color: #FFFFFF;
+	padding: 0 .1rem;
+	cursor: pointer;
+}
+.footer_right:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset;
+}
+.iframe{
+	text-align:center
+	background-color: #f8f8f8;
+}
+/*图片详情*/
+
+.Details{
+	margin: 0 auto;
+    width: 3rem;
+	margin-top: -30px;
+	padding: 0 10px 0 10px;
+}
+.Details>img{
+	width: 100%;
+	margin-bottom: -9.5%;
+}

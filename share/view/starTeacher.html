@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>明星老师主页</title>
+		<link rel="stylesheet" href="../css/starTeacher.css" />
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+			<script id="tmp" type="text/html">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>  
+			<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<div class="main_container" id="model">
+			<div class="main_top">
+				<!-- 头像 -->
+				<div class="top-bg">
+					<div class="power_num">
+						<i class="fa fa-bolt"></i>能量值：{{data.EnergyValue}}
+					</div>
+					<div class="user-info" style="background-image: url({{data.HeadURL}});">
+							<div class="tag-name">{{data.Label}}</div>
+						</div>
+					<div class="follow_user">
+						<i class="fa fa-plus"></i>关注
+					</div>
+				</div>
+					<!-- 名字 -->
+					<div class="user-name">
+							<span class="user_span span_name">{{data.Name}}</span>
+							<span class="user_span span_logo" id="abc">
+								<img src="../img/icon_male.png" />
+							</span>
+							<span v-else class="user_span span_logo" id="cba">
+								<img src="../img/icon_female.png" />
+							</span>
+							<span class="user_span  span_logo1" >
+								<img src="../img/masterCourse/蝴蝶-3.png" />
+							</span>
+							<span class="user_span logo_grade">M{{data.Mlevel}}</span>
+						</div>
+						<!-- 关注与粉丝 -->
+						<div class="public_span">
+							<span class="user_span follow_span">
+								关注<span class="span_tag">{{data.FollowCount}}</span>
+							</span>
+							<span class="user_span">
+								粉丝<span class="span_tag">{{data.FansCount}}</span>
+							</span>
+						</div>
+						<!-- 个人心情 -->
+						<div class="public_span">
+							<span class="mood">{{data.Notice}}</span>
+						</div>
+					</div>
+			<!-- 明星课程 -->
+			<div class="shop_public">
+				<div class="tag_div">
+					<span class="dynamic_tag">
+						明星课程
+					</span>
+				</div>
+				<ul class="course_ul">
+						{{if info.data.CourseList}}
+						{{each info.data.CourseList value index}}
+						{{if index < 2 }}
+						<li>
+							<div class="couse_img" style="background-image: url({{value.CourseShowImg}});">
+								<div class="diamond_tag">
+									<img src="../img/course/diamond.png" />
+								</div>
+								<div class="video_start">
+										<img src="../img/courseShare/courseplay_suspend.png" >
+								</div> 
+							</div>
+							<div class="course_name">
+								{{value.CourseTitle}}
+							</div>
+						</li>
+						{{else  if  index > 3 }}
+						<span></span>
+						{{/if}}
+						{{/each}}
+				{{else}}
+			   <span></span>
+			   {{/if}}
+				</ul>
+				<div class="more_talk" id="xiazai1">
+					更多课程
+				</div>
+			</div>
+			<!-- 相册 -->
+			<div class="shop_public">
+					<div class="tag_div">
+						<span class="dynamic_tag">
+							相册
+						</span>
+					</div>
+					<table class="photo_table">
+						{{if list.data}}
+							{{each list.data  value  index}}
+							{{if index < 9 && index == 0}}
+						<tr>
+							<td colspan="2" rowspan="2">
+								<div class="photo_img firstPhoto" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+							 {{else if index < 9 && index == 1}}
+							<td>
+								<div class="photo_img" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+						</tr>
+						{{else if index < 9 && index == 2}}
+						<tr>
+							<td>
+								<div class="photo_img" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+						</tr>
+						{{else if index < 9 && index == 3}}
+						<tr>
+							<td>
+								<div class="photo_img" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+							{{else if index < 9 && index == 4}}
+							<td>
+								<div class="photo_img" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+							{{else if index < 9 && index == 5}}
+							<td>
+								<div class="photo_img" style="background-image: url({{value.thumbnail}});"></div>
+							</td>
+						</tr>
+						{{/if}}
+						{{/each}}
+							{{else}}
+						   <span></span>
+						{{/if}}
+					</table>
+					<div class="more_talk" id="xiazai1">
+						更多照片
+					</div>
+					<!-- 查看更多 -->
+					<div class="see-more" id="xiazai">
+						查看更多
+					</div>
+				</div>
+			</div>
+	</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/starTeacher.js" ></script>
+</html>

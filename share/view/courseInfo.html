@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>课程详情分享</title>
+		<link rel="stylesheet" href="../css/courseInfo.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+		<script id="tmp" type="text/html"> 
+				<!-- 头 -->
+		<div class="top-container" >
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+				<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div>
+		<div class="main-container">
+			<!-- 上 -->
+			<div class="info_top">
+				<div class="info_bg" style="background-image: url({{data.Cover}});">
+					<div class="info_title">
+						<span class="border-top"></span>
+						<div class="title_content">
+							<div class="title_font">[{{data.Title}}]</div>
+							<div class="title_font" id="time"></div>
+						</div>
+						<span class="border-bottom"></span>
+					</div>
+				</div>
+				<div class="get_course" id="xiazai">
+					立即报名
+				</div>
+			</div>
+			<!-- 下 -->
+			<div class="info_bottom">
+				<div class="public_info">
+					<!-- 华丽的分割线 -->
+					<div class="dividing_line">
+						<span class="line border">
+							<img src="../img/courseInfo/borderLeft.png" />
+						</span>
+							<div class="con" id="con"></div>
+				<!-- 在线咨询 -->
+				<div class="public_info online">
+					<!-- 华丽的分割线 --> 
+					<div class="dividing_line">
+						<span class="line border">
+							<img src="../img/courseInfo/borderLeft.png" />
+						</span>
+						<span class="line line_font">在线咨询</span>
+						<span class="line border">
+							<img src="../img/courseInfo/borderRight.png" />
+						</span>
+					</div>
+					<ul class="teacher_container">
+						<li id="xiazai1">
+							<div class="teacher_header" style="background-image: url(../img/info_bg.png);"></div>
+							<div class="teacher_online">
+								<span class="online_img">
+									<img src="../img/courseInfo/message.png" />
+								</span>
+								<span class="online_font">
+									黄老师
+								</span>
+							</div>
+						</li>
+						<li id="xiazai2">
+							<div class="teacher_header"  style="background-image: url(../img/articleShare/pt.png);"></div>
+							<div class="teacher_online">
+								<span class="online_img">
+									<img src="../img/courseInfo/message.png" />
+								</span>
+								<span class="online_font">
+									瑜伽妹
+								</span>
+							</div>
+						</li>
+						<li id="xiazai3">
+							<div class="teacher_header"   style="background-image: url(../img/u=36337156,310763697&fm=27&gp=0.jpg);"></div>
+							<div class="teacher_online">
+								<span class="online_img">
+									<img src="../img/courseInfo/message.png" />
+								</span>
+								<span class="online_font">
+									王老师
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+    <script type="text/javascript" src="../js/courseInfo.js" ></script>
+</html>

@@ -1,0 +1,190 @@
+@import url("public.css");
+.main-container {
+  margin-top: 0.4rem;
+  border-top: 1px solid #f4f4f4;
+}
+/**
+ * 上
+ */
+.top_container {
+  padding: 0.09rem;
+}
+.course_title {
+  font-size: 0.2rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.other_info {
+  font-size: 0.1rem;
+  color: #b1b1b1;
+  margin-top: 0.06rem;
+}
+.courseNum {
+  border-right: 0.03rem solid #b1b1b1;
+  padding-right: 0.09rem;
+  margin-right: 0.1rem;
+}
+.more_font {
+  float: right;
+  color: #b1b1b1;
+  margin-right: 0.05rem;
+}
+
+/*图片*/
+.couse_img {
+  width: 3rem;
+  height: 1.3rem;
+  border-radius: 0.1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ab {
+  margin-top: 0.07rem;
+  width: 3rem;
+  height: 0.15rem;
+  font-size: 0.11rem;
+}
+.ab1 {
+  float: right;
+  color: #fc4470;
+}
+/*标题*/
+.biaot {
+  width: 3rem;
+  height: 0.4rem;
+  padding-top: 0.05rem;
+  text-align: center;
+  font-size: 0.2rem;
+}
+/*时间*/
+.sj {
+  font-size: 0.1rem;
+  color: #111111;
+  margin-bottom: 0.1rem;
+}
+/*中*/
+.neirong {
+  /*padding: 1rem;*/
+}
+.fengexian {
+  width: 2.9rem;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #dddddd;
+  padding-top: 0.12rem;
+  padding-left: 0.1rem;
+}
+.wenz {
+  margin-right: 0.01rem;
+  font-size: 0.13rem;
+  line-height: 0.23rem;
+  color: #171717;
+  margin-bottom: 0.1rem;
+}
+.tp {
+  width: 2.8rem;
+  height: 1.3rem;
+  border-radius: 0.09rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 0.1rem;
+}
+.tp_z {
+  text-align: center;
+  font-size: 0.1rem;
+  color: #171717;
+  margin-bottom: 0.1rem;
+}
+/*下*/
+.guiz {
+  margin-top: 0.1rem;
+  width: 3rem;
+  height: 0.4rem;
+  font-size: 0.2rem;
+  text-align: center;
+}
+.guiz1 {
+  width: 2.9rem;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #dddddd;
+  padding-top: 0.12rem;
+  padding-left: 0.1rem;
+  font-size: 0.12rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.21rem;
+  color: #171717;
+}
+.get_course {
+  width: 50%;
+  margin: 0.25rem auto;
+  border-radius: 0.05rem;
+  font-size: 0.15rem;
+  padding: 0.05rem 0.09rem;
+  background-color: #ff507c;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.shuom {
+  width: 2.9rem;
+  padding-left: 0.1rem;
+  font-size: 0.1rem;
+  line-height: 0.21rem;
+  color: #171717;
+}
+.control {
+}
+.main-container {
+  margin-top: 0.4rem;
+}
+.top_img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 1.5rem;
+}
+.talk_title {
+  padding: 0.05rem;
+}
+.title_div {
+  font-size: 0.11rem;
+  float: right;
+  color: #ff507c;
+  margin: 0.05rem 0;
+}
+.top_title {
+  height: 0.3rem;
+  background-repeat: no-repeat;
+  margin: 0.26rem auto;
+  background-size: 0.15rem;
+  font-size: .15rem;
+  /* background: red; */
+  padding-left: 5%;
+  text-align: center;
+}
+.top_title1 {
+  width: 2rem;
+  font-size: 0.15rem;
+  position: relative;
+  top: -0.5rem;
+  left: 0.76rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.time {
+  font-size: 14px;
+  margin-left: 0.23rem;
+  margin-bottom: 8px;
+  color: #b1b1b1;
+}
+.top_titlea {
+  margin-bottom: -0.25rem;
+  width: 3rem;
+  margin: 0 auto;
+}

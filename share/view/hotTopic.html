@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>话题主页</title>
+		<link rel="stylesheet" href="../css/hotTopic.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script> 
+	</head>
+	<body>  
+	<script id="tmp" type="text/html">
+				{{if data}} 
+				{{each data value index}}
+		<ul class="hot_container" data-id="{{value.TpcId}}"> 
+			<li>
+				<div class="left_img" style="background-image: url({{value.ThumbnailURL}});">
+					{{if value.IsActivity == false}}
+					<span></span> 
+					{{else if value.IsActivity == true}}
+					<div class="topic_type">
+						话题
+					</div>
+					{{/if}}
+				</div>
+				<div class="right_container">
+					<div class="topic_title">
+						#{{value.TpcTitle}}#
+					</div>
+					<div class="topic_intro">
+						{{value.TpcContent}}
+					</div>
+					<div class="topic_num">
+						{{value.Participants}}人参与
+					</div>
+				</div>
+			</li>
+		</ul>
+		 {{/each}}
+		{{else}}
+		<span></span>
+		{{/if}}
+	</script>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/hotTopic.js" ></script>	
+</html>

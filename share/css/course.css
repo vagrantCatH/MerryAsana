@@ -1,0 +1,186 @@
+@import url("public.css");
+.public_course,.public_starCourse{
+	padding: .09rem;
+	position: relative;
+}
+.public_course:after{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.public_title{
+	font-size: .13rem;
+	letter-spacing: 3px;
+}
+.public_title:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*更多课程*/
+.more_course{
+	float: right;
+	font-size: .11rem;
+}
+.more_course>span{
+	display: inline-block;
+}
+.more_font{
+	color: #FF507C;
+}
+.more_img{
+	vertical-align: middle;
+	width: .12rem;
+}
+.more_img>img{
+	width: 100%;
+}
+/*列表*/
+.course_ul{
+	margin: .09rem 0 0;
+	list-style: none;
+}
+.course_ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.course_ul>li{
+	float: left;
+	width: 48%;
+	margin-right: 3%;
+	margin-bottom: .1rem;
+	position: relative;
+	padding-bottom: .05rem;
+}
+.course_ul>li:nth-of-type(2n){
+	margin-right: 0;
+}
+.couse_img{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: .9rem;
+	border-top-left-radius: .13rem;
+	border-top-right-radius: .13rem;
+	position: relative;
+}
+.new_tag{
+	font-size: .1rem;
+	position: absolute;
+	right: -.03rem;
+	top: -.03rem;
+}
+.diamond_tag{
+	font-size: .1rem;
+	position: absolute;
+	width: .5rem;
+	left: 0;
+	top: 0;
+}
+.diamond_tag>img{
+	width: 100%;
+}
+.course_name{
+	font-size: .12rem;
+	margin: .05rem 0;
+	display:-webkit-box;
+	overflow:hidden;
+	white-space:normal !important;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+}
+.course_time{
+	font-size: .1rem;
+	color: #545454;
+}
+.video_start{
+	font-size: .1rem;
+	padding: .05rem .15rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0,0,0,.5);
+    border-radius: .1rem;
+    cursor: pointer;
+}
+.video_introduce{
+	padding: .09rem;
+}
+/**
+ * 名师工作坊
+ */
+.starCourse_ul{
+	margin: .09rem 0 0;
+	list-style: none;
+}
+.starCourse_ul>li{
+	margin-bottom: .1rem;
+	position: relative;
+	padding-bottom: .05rem;
+}
+.starCourse_ul>li:after{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.starCouse_img{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 1.5rem;
+	border-radius: .13rem;
+	position: relative;
+}
+.course_cover{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: .09rem;
+	background-color: rgba(0,0,0,.5);
+	color: #FFFFFF;
+	width: 94%;
+	font-size: .12rem;
+	border-bottom-left-radius: .13rem;
+	border-bottom-right-radius: .13rem;
+}
+.starCourse_name{
+	font-size: .12rem;
+	margin: .05rem 0;
+	display:-webkit-box;
+	overflow:hidden;
+	white-space:normal !important;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+	padding-left: .09rem;
+}

@@ -1,0 +1,415 @@
+@import url("public.css");
+/**
+ * 中间
+ */
+ body{
+	 /* background-color: #fdf3f3; */
+     margin: 0 auto;
+     background: url(../img/最终版本_05.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+ }
+.main-container{
+	width: 3.2rem;
+	margin: 0 auto;
+	margin-top: .34rem;
+	/* background: #fdf3f3; */
+}
+.backdorp{
+    background: url(../img/最终版本_02.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 1.75rem;
+    text-align: center;
+	position: relative;
+	/* background-color: #fdf3f3; */
+}
+.Underline{
+	text-decoration: underline;
+}
+.slogan{
+    font-size: .11rem;
+}
+.ye{
+    width: .4rem;
+    height: .7rem;
+    position: relative;
+    top: -1.6rem;
+    left: 1.4rem;
+    z-index: 2;
+}
+/*头像*/
+.top-bg{
+	/* background: url(../img/页头.png) no-repeat; */
+    /* background-size: 100% 180%; */
+    /* width: 100%; */
+    height: 1rem;
+    text-align: center;
+    position: relative;
+}
+.user-info{
+	width: .7rem;
+    height: .7rem;
+    background-image: url(../img/touxiang_icon@2x.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	border: .03rem solid #FFFFFF;
+	margin: 0 auto;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.user-header{
+	position: relative;
+}
+.user-header>img{
+	width: 100%;
+	border-radius: 50%;
+	border: .03rem solid #FFFFFF;
+}
+.tag-name{
+	position: absolute;
+    background: #ffa300;
+    color: #FFFFFF;
+    font-size: .12rem;
+    width: 100%;
+    padding: 0 .05rem;
+    border-radius: 1rem;
+    left: 50%;
+    bottom: -.09rem;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+/*昵称*/
+.user-name{
+	font-size: .13rem;
+    margin-top: .35rem;
+    text-align: center;
+}
+.user-table{
+	width: 100%;
+	text-align: center;
+}
+.user_span{
+	display: inline-block;
+}
+.span_name{
+	margin-right: .09rem;
+}
+.span_logo{
+	width: .15rem;
+	height: .15rem;
+	vertical-align: middle;
+}
+
+.span_logo>img{
+	width: 100%;
+}
+.logo_grade{
+	vertical-align: middle;
+	background-color: #FFA300;
+	color: #FFFFFF;
+	width: .15rem;
+	height: .15rem;
+	border-radius: 50%;
+	text-align: center;
+	font-size: .08rem;
+	line-height: .15rem;
+}
+/**
+ * 中下部
+ */
+.bottom-container{
+	/* margin-top: .1rem;
+    padding: 0 .1rem; */
+    text-align: center;
+    margin-bottom: -2rem;
+}
+.content{
+	width: 2rem;
+    position: absolute;
+    height: .9rem;
+    top: 1.1rem;
+    left: .5rem;
+    letter-spacing: 0.01rem;
+}
+.card{
+	background: url(../img/卡片.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    position: relative;
+	/* background-color: #fdf3f3; */
+}
+.console{
+	height: .23rem;
+}
+.project_l{
+	font-size: .13rem;
+    float: left;
+    color: #f97a9b;
+    font-weight: 600;
+}
+.project_r{
+	font-size: .13rem;
+    float: right;
+    color: #f97a9b;
+    font-weight: 600;
+}
+/* 提示 */
+.prompt{
+	text-align: center;
+    font-size: .1rem;
+    color: #fc4470;
+    margin-top: .2rem;
+}
+/* 分割线 */
+.Dividing{
+	height: 2px;
+    /* background-color: #66ccff; */
+    text-align: center;
+    padding-left: 0.13rem;
+}
+.line{
+	height: 1px;
+    background-color: #dddddd;
+    margin-top: .2rem;
+    width: 94%;
+    text-align: center;
+}
+.bottom_hua{
+    width: 100%;
+    height: 1.2rem;
+    margin-top: rem;
+    position: relative;
+    top: 1.73rem;
+    /* left: 0.3rem; */
+}
+/* 提示手机号 */
+.call{
+	/* font-weight: 600; */
+    font-size: .1rem;
+    position: relative;
+    top: .3rem;
+    left: -.7rem;
+    color: #664732;
+}
+/* 馆主提示 */
+.point{
+	font-size: .1rem;
+    position: relative;
+    top: -0.15rem;
+    left: -.18rem;
+    /* z-index: 5; */
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+/*宣传语*/
+.slogan-container{
+    background: url(../img/最终版本_03.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.3rem;
+	
+}
+
+.one{
+    width: 2.3rem;
+    margin: .9rem 0 auto;
+    margin-left: 10%;
+}
+.one1{
+    width: 2.3rem;
+    top: 40%;
+    left: 15%;
+    position: fixed;
+}
+.two1{
+    width: 2.3rem;
+    margin: .9rem .2rem .2rem .4rem;
+}
+.two{
+    width: 2.3rem;
+    margin-left: 10%;
+}
+.three{
+    width: 100%;
+    position: relative;
+    top: -.7rem;
+}
+/* 底部说明 */
+.caption{
+	width: 100%;
+    /* height: 2.5rem; */
+    /* padding: 0.4rem; */
+    padding-top: 0.09rem;
+    margin-top: .25rem;
+    position: relative;
+    top: 2rem;
+    /* z-index: 5; */
+}
+u{
+	/* font-weight: 600; */
+}
+.member_level{
+	text-align: right;
+	margin-top: .1rem;
+	color: #FF507C;
+	font-size: .13rem;
+}
+.petal{
+	/* background: url(../img/花瓣.png) no-repeat; */
+    background-size: 101% 117%;
+    width: 100%;
+    height: 1.58rem;
+    text-align: center;
+    position: relative;
+    /* background-color: #fdf3f3; */
+}
+.huaban{
+	background: url(../img/花瓣.png) no-repeat;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 6rem;
+    background-size: 3.2rem;
+	margin: -.1rem;
+}
+form{
+	margin-top: .41rem;
+	font-size: .15rem;
+    padding: 0 .09rem;
+    background: url(../img/最终版本_04bj.png) no-repeat;
+    background-size: 100% 100%;
+    width: 94%;
+    height: 1.5rem;
+}
+.form_public{
+	margin-top: .45rem;
+    margin-bottom: -32px;
+}
+.form_logo{
+	width: .2rem;
+	vertical-align: bottom;
+	margin-right: .05rem;
+	margin-bottom: -.05rem;
+}
+.form_logo>img{
+	width: 80%;
+}
+.form_logo>.st {
+    width: 125%;
+    /* margin-bottom: 5px; */
+}
+input[type="tel"],input[type="password"]{
+	    width: 2rem;
+    padding: .05rem;
+    border: none;
+    border-bottom: 1px solid #664732;
+    background-color: #f1e9e5;
+    color: #ac998b;
+    opacity: 0.5;
+    letter-spacing: 4px;
+    font-size: .12rem;
+}
+.randCode{
+	width: 1rem;
+    padding: .05rem;
+    border: none;
+    border-bottom: 1px solid #664732;
+    color: #ac998b;
+    opacity: 0.5;
+    background-color: #f1e9e5;
+    letter-spacing: 4px;
+    font-size: .12rem;
+    margin-right: 20px;
+}
+.Code{
+	width: 1rem;
+    padding: .05rem;
+    border: none;
+    border-bottom: 1px solid #FF507C;
+    color: #fda1b6;
+    opacity: 0.5;
+    /* background-color: #fdf3f3; */
+    letter-spacing: 4px;
+    font-size: .12rem;
+    position: relative;
+    top: -0.2rem;
+    left: -.27rem;
+}
+/*去除数字框的上下箭头*/
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+}
+.code_font{
+	display: inline-block;
+    border: 1px solid #664732;
+    color: #664732;
+    font-size: .11rem;
+    padding: .05rem .09rem;
+    border-radius: .05rem;
+    cursor: pointer;
+}
+/*修改输入框提示文字颜色*/
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ab998c;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ab998c;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ab998c;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ab998c;
+}
+/**
+ * 提交按钮
+ */
+.bottom-btn{
+	width: 1.8rem;
+    margin: 0 auto;
+    font-size: .15rem;
+    cursor: pointer;
+    margin-top: 21px;
+    position: relative;
+    top: 2.05rem;
+}
+.bottom-btn>img{
+	width: 100%;
+}
+.width{
+    /* width: 3rem; */
+}
+/* 遮罩层 */
+.mask{
+    width: 100%;
+    height: 11.2rem;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    background:rgba(0, 0, 0, 0.82);
+    margin-top: 43px;
+    display: none;
+    z-index: 5;
+}
+.mask1{
+    width: 100%;
+    height: 11.2rem;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    background:rgba(0, 0, 0, 0.82);
+    margin-top: 43px;
+    display: none;
+    z-index: 5;
+}

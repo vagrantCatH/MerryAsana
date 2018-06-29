@@ -1,0 +1,206 @@
+@import url("public.css");
+
+.main-container{
+	margin-top: .4rem;
+}
+.top_title{
+	font-size: .2rem;
+	text-align: center;
+	margin-bottom: 0.04rem;
+}
+.top_message{
+	font-size: .1rem;
+	text-align: center; 
+	padding-left: .5rem;
+	margin: auto;
+	padding-right: .1rem;
+	color: #b1b1b1;
+	margin-bottom: 0.03rem;
+} 
+.top_time{
+   display: inline;
+}
+.top_collection{
+	float: right;
+}
+.top_img{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 1.5rem;
+}
+.talk_title{
+	padding: .05rem;
+}
+.down_chevron{
+	padding-top:.15rem ;
+	text-align: center;
+	font-size: .15rem;
+	cursor: pointer;
+	color: #171717;
+}
+/*活动时间*/
+.top_timeT{
+	margin-top: .1rem;
+	font-size: .15rem;
+	padding-left: .3rem;
+}
+.top_activity{
+	  display: inline;
+      color: #171717;
+}
+.pinktime{
+	  display: inline;
+	  font-size: .15rem;
+	  color: #fc4470;
+}
+.pinktimea{
+	isplay: inline-block;
+    font-size: .14rem;
+    color: #fc4470;
+    margin-left: 64px;
+    position: relative;
+    top: -22px;
+    left: 10px;
+    width: 215px;
+}
+.activity{
+	padding-right: .4rem;
+	display: inline;
+	font-size: .11rem;
+	float: right;
+	color: #545454;
+	padding-top:.05rem ;
+}
+/**
+ * 华丽的分割线
+ */
+.dividing{
+	background: url(../img/welfareCenter/points.png) repeat-x;
+	width: 2rem;
+	height: .01rem;
+	margin: .09rem auto;
+}
+/*活动介绍*/
+.content{
+	padding: .15rem;
+    padding-top: 0.09rem;
+    font-size: .12rem;
+    height: 80px;
+	overflow: hidden;
+}
+/*立即报名*/
+.get_course{
+	width: 50%;
+	margin: .26rem auto;
+	border-radius: .05rem;
+	font-size: .15rem;
+	padding: .05rem .09rem;
+	background-color: #FF507C;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin-bottom: .1rem;
+}
+.get_course:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset; 
+}
+.apply{
+	text-align: center;
+	font-size: .1rem;
+	color:#b1b1b1;
+}
+/*更多活动*/
+.hot_container{
+	list-style: none;
+}
+.hot_container>li{
+	padding: .09rem .09rem .2rem;
+	position: relative;
+}
+.hot_container>li:after{
+	content: "";
+	display: block;
+	clear: both;
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #DDDDDD;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.left_img{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 1rem;
+	height: .9rem;
+	border-radius: .1rem;
+	margin-right: .09rem;
+	float: left;
+	position: relative;
+}
+.topic_type{
+	position: absolute;
+	top: .08rem;
+	left: 0;
+	font-size: .1rem;
+	background-color: #FF507C;
+	color: #FFFFFF;
+	padding: .02rem .09rem;
+	border-top-right-radius: .08rem;
+	border-bottom-right-radius: .08rem;
+	border-bottom-left-radius: .08rem;
+}
+.topic_title{
+	font-size: .14rem;
+	font-weight: 500;
+	color: #FF507C;
+	margin-bottom: .05rem;
+	display:-webkit-box;
+	overflow:hidden;
+	white-space:normal !important;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical
+}
+.address{
+	font-size: .13rem;
+}
+.fa-map-marker{
+	font-size: .13rem;
+}
+.tb{
+	width: .3rem;
+	height: .2rem;
+}
+.topic_intro{
+	font-size: .12rem;
+	display:-webkit-box;
+	overflow:hidden;
+	white-space:normal !important;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+	margin-bottom: .05rem;
+}
+.topic_num{
+	font-size: .1rem;
+	color: #B1B1B1;
+}
+.topic_time{
+	margin-bottom: .09rem;
+	font-size: .11rem;
+	color: #B1B1B1;
+}

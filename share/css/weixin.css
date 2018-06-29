@@ -1,0 +1,29 @@
+@import url("public.css");
+.main-container{
+	background-size:100% 100%;  
+	background-attachment: fixed;
+}
+.main-container>img{
+	width: 100%;
+	height: 100%;
+	margin-bottom: -.32rem;
+}
+.xiazai{
+	width: .9rem;
+	height: .16rem;
+	background-color: #66ccff;
+	text-align: center;
+	padding-top: .08rem;
+	padding-bottom: .08rem;
+	top: -0.8rem;
+	font-size: .14rem;
+	color: #ffffff;
+	position: relative;
+    bottom: .68rem;
+    margin: auto;
+    border-radius:2px ;
+    box-shadow: 3px 3px 3px #b1b1b1;
+    font-weight:bold;
+   background: linear-gradient( #FB7FAF,#E7377E);
+   cursor:pointer
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>线上活动分享</title>
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/offline.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js"></script>
+	</head>
+	<style type="text/css">
+		.control{
+			margin: 0 auto; 
+			text-align: center; 
+		}
+	</style> 
+	<body>  
+			<scirpt id="tmp" type="text/html">
+			<div class="top-container" >
+					<div class="left">
+						我家瑜伽&nbsp;Home&nbsp;Yoga 
+					</div>
+						<div class="right" id="xiazai">
+						下载APP
+					</div>
+				</div>
+				<div class="main-container">
+						<div class="talk_top">
+							<div class="top_img" style="background-image: url({{data.ShowImgUrl}});"></div>
+							<div class="talk_title">
+								<div class="title_div" id="xiazai1">
+									查看活动主题页&gt;&gt;
+								</div>
+								<div class="top_titlea">
+									<div class="top_title"  style="background-image: url(../img/标题.png);">
+									    {{data.OlaTitle}}
+									</div>
+								</div>
+						</div>
+						<div class="time">活动时间:2018-05-12至2018-05-23</div>
+		<div class="control">                         
+				<iframe id="mainiframe" width="360px" height="600" src="{{data.OlaDetailUrl}}" frameborder="0" scrolling="auto"></iframe>
+		</div>
+	</scirpt>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/vue.min.js" ></script>
+	<script type="text/javascript" src="../js/onlineShare.js" ></script>
+	<script>
+	</script>
+</html>

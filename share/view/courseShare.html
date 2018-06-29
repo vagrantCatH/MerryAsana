@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>课程分享</title>
+		<link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/courseShare.css" />
+		<link rel="stylesheet" href="../css/lib/layer.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../js/lib/template.js" ></script>
+	</head>
+	<body>
+		<scirpt id="tmp" type="text/html">
+		<!-- 头 -->
+		<div class="top-container">
+			<div class="left">
+				我家瑜伽&nbsp;Home&nbsp;Yoga
+			</div>
+			<div class="right" id="xiazai">
+				下载APP
+			</div>
+		</div> 
+		<div class="main-container">
+			<!-- 上 -->
+			<div class="top_container">
+				<div class="course_title">
+					{{data.SyllabusTitle}}
+				</div>
+				<div class="other_info">
+					<span class="courseNum">
+						7课时
+					</span>
+					<span class="courseSee">
+						
+					</span>
+				</div>
+				<div class="more_course">
+					<span class="more_font" id="gengduo">
+						更多课程
+					</span> 
+					<span class="more_img"> 
+						<img src="../img/courseShare/more_icon.png" />
+					</span> 
+				</div>
+			</div>
+			<!-- 中 -->
+			<div class="player">
+					<!-- {{data.CourseVideo}} -->
+			<video  src="{{data.CourseVideo}}" controls="" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" preload="auto"></video> 
+            <div class="video_img1" id="video_img1" style="background-image: url({{data.CourseShowImg}});"></div>
+            <div class="video_start" id="video_start">
+			<img src="../img/courseShare/courseplay_suspend.png" >
+           </div>	
+            <!-- 控制条-->
+            <div class="controls" id="controls">
+                <!-- 开关-->
+                <i class="switch fa fa-play" id="switch" ></i>
+                <!-- 进度条-->
+                <span class="curr-time" id="curr-time">00:00</span> 
+                <div class="progress">
+                    <div class="curr-progress" id="curr-progress"></div>
+                </div> 
+                <!-- 时间-->
+                <div class="time">
+                    <span class="total-time" id="total-time">00:00</span>
+                </div>
+                <!-- 全屏-->
+                <span class="extend fa fa-arrows-alt"></span>
+            </div>
+        </div>
+         
+			<div class="middle_container">
+				<div class="video_introduce">
+					<div class="intro_title">
+						{{data.CourseTitle}}
+					</div>
+					<div class="course_intro">
+						<span class="intro_img">
+							<img src="../img/courseShare/introl_icon.png" />
+						</span>
+						<span class="intro_font">
+							课程简介
+						</span>
+					</div>
+					<pre class="intro_content">{{data.CourseSummary}}</pre>
+					<div class="down_chevron" id="show">
+						<i class="fa fa-angle-down"></i>
+					</div>
+				</div>
+			</div>
+			<!-- 下 -->
+			<div class="bottom_container">
+				<div class="public_title" id="gengduo1">
+					更多课程
+				</div>
+				<ul class="course_ul">
+					{{if data.CourseList }}
+					{{each data.CourseList  value index }}
+						<li class="lu" data-id="{{value.CourseId}}">
+							<div class="couse_img" style="background-image: url({{value.CourseShowImg}});">
+								<div class="video_start">
+									<img src="../img/courseShare/courseplay_suspend.png" >
+								</div>
+							</div>
+							<div class="course_name">
+								{{value.CourseTitle}}
+							</div>
+						</li>
+						{{/each}}
+						{{else}}
+					   <li></li> 
+					   {{/if}}
+					</ul>
+				<!-- 查看更多 -->
+				<div class="see-more" id="gengduo2">
+					查看更多高阶课程
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../js/lib/layer.js" ></script>
+	<script type="text/javascript" src="../js/courseShare.js"></script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>能量值排行榜</title>
+		<link rel="stylesheet" href="../appview/css/appenergyRank.css" />
+		<!-- 页面自适应js -->
+		<script type="text/javascript" src="../appview/js/lib/pageFree.js" ></script>
+		<script type="text/javascript" src="../appview/js/lib/template.js" ></script>
+	</head>
+	<body>
+		<script id="tmp" type="text/html">
+		<div class="main-container">
+			<div class="rank_bg"></div>
+			<div class="rank_container" id="model">
+				<ul class="rank_ul">
+					{{if data }}
+					{{ each data value index}}
+					<li>
+						<div class="rank_info">
+							{{if value.ConHeadportrait == "?x-oss-process=style/head"}}
+							<div class="rank_header" style="background-image: url(../appview/img/touxiang_icon@2x.png);"></div>
+							{{else if value.ConHeadportrait !== "?x-oss-process=style/head"}}
+							<div class="rank_header" style="background-image: url({{value.ConHeadportrait}});"></div>
+							{{/if}}
+							<div class="rank_name">
+								{{if index >= 3}}
+								<span class="rank_font1">
+									{{value.ConNickname}}
+								</span>
+								{{else if index < 3}}
+									<span class="rank_font">
+									{{value.ConNickname}}
+								</span>
+								{{/if}}
+								<span class="rank_icon">
+									{{if index == 0}}
+									<img src="../img/energyRank/one_icon.png" />
+									{{else if index == 1}}
+									<img src="../img/energyRank/two_icon.png" />
+									{{else if index == 2}}
+									<img src="../img/energyRank/three_icon.png" />
+									{{else if index < 2}}
+									<span></span>
+									{{/if}}
+								</span>
+							</div>
+							<div class="rank_num colorFont">
+								第<span class="number">{{index+1}}</span>名
+							</div>
+						</div>
+						<div class="rank_level">
+							<ul class="level_ul">
+								<li style="width: 10%;"> 
+									<div class="level_font">
+										M{{value.MLevel}}
+									</div>
+								</li>
+								<li style="width: 80%;" >
+									<div class="rank_inner" style="width:{{value.ConEnergyvalue/value.Experience*100}}%"></div>
+									<div class="center">
+											<div class="rank_bottom">
+													&nbsp;
+												</div>
+									</div>
+									<div class="abc" style="left:{{value.ConEnergyvalue/value.Experience*100-20}}%">
+										<p>总能量值{{value.ConEnergyvalue}}</p>
+								</div>
+								</li>
+								<li style="width: 10%;">
+									<div class="level_font">
+										M{{value.MLevel+1}}
+									</div>
+								</li>
+							</ul>
+						</div>
+                              <div class="line">
+							       <div class="line1"></div>	  
+							</div>
+					</li>
+					{{/each}}
+			        {{else}}
+			        	<li></li>
+			        {{/if}}
+				</ul>
+			</div>
+		</div>
+		</script>
+	</body>
+	<script type="text/javascript" src="../appview/js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="../appview/js/appEnergyRank.js" ></script>
+</html>

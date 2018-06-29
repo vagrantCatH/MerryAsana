@@ -1,0 +1,132 @@
+@import url("public.css");
+.main-container{
+	border-top: 1px solid #F4F4F4;
+	padding-bottom: .45rem;
+	margin-top: .37rem;
+}
+/**
+ * 轮播图
+ */
+.swiper-container{
+	max-height: 2rem;
+	font-size: .3rem;
+	overflow: hidden;
+}
+.swiper-slide>img{
+	width: 100%;
+    /* height: 100%; */
+    /* background-image: center center;
+    height: 2.1rem; */
+    /* margin-left: -.85rem; */
+}
+.size{
+	font-size: .1rem;
+}
+/**
+ * 下方主内容
+ */
+.welfare_container{
+	font-size: .3rem;
+	padding: .09rem;
+}
+.title_container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.welspan{
+	display: inline-block;
+	margin-bottom: .05rem;
+}
+.welleft{
+	font-size: .15rem;
+	float: left;
+	font-weight: 600;
+	letter-spacing: 3px;
+}
+.welright{
+	font-size: .1rem;
+	float: right;
+	padding: .02rem .05rem;
+	border: 1px solid #FF507C;
+	color: #FF507C;
+	border-radius: .1rem;
+}
+.welPrice{
+	font-size: .1rem;
+	color: #B1B1B1;
+}
+/**
+ * 华丽的分割线
+ */
+.dividing{
+	background: url(../img/welfareCenter/points.png) repeat-x;
+	width: 2rem;
+	height: .01rem;
+	margin: .1rem auto;
+}
+/**
+ * 详细介绍
+ */
+.content_table{
+	font-size: .12rem;
+}
+.content_table tr td{
+	padding: .05rem 0;
+}
+.content_table tr td:nth-child(odd){
+	width: 7em;
+}
+.content{
+	margin-top: 20px;
+	padding-left: 0%;
+	font-size: .12rem;
+}
+/**
+ * 底部工具栏
+ */
+.footer{
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    height: .37rem;
+    line-height: .4rem;
+    background-color: rgba(255,255,255,.8);
+    padding-left: .05rem;
+    font-size: .1rem;
+    border-top: 1px solid #F4F4F4;
+}
+.footer:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.footerSpan{
+	display: inline-block;
+}
+.footer_left{
+	float: left;
+	padding-left: 0.05rem;
+}
+.footerPrice{
+	color: #FF507C;
+}
+.footer_right{
+	float: right;
+    background-color: #FF507C;
+    color: #FFFFFF;
+    padding: 0 .1rem;
+    cursor: pointer;
+    width: .8rem;
+    text-align: center;
+}
+.footer_right:active{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.5) inset;            /* For Chrome5+, Safari5+ */
+	box-shadow: 0 0 20px rgba(0,0,0,.5) inset;
+}
+.iframe{
+	text-align:center
+	background-color: #f8f8f8;
+}
