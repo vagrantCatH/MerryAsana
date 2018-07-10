@@ -57,7 +57,7 @@
 				</div>
 			</div>
 				<div class="teacher_info">
-					<div class="teacher_public">
+					<div class="teacher_public"> 
 						<div class="teacher_title">
 							<img src="../img/teacherWork/teacherBg.png" /> 
 							预告
@@ -69,42 +69,21 @@
 					<!-- 教师轮播 -->
 					<div class="swiper-container" id="teacher">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-									{{if data.TeacherInfo}}
-									{{each data.TeacherInfo  value  index}}
-							  {{if index == 0}}
-								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
-								<div class="teacher_box">
-									<div class="name">{{value.Name}}</div>
-									<div class="job">{{value.Appellation}}</div> 
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
-								<div class="teacher_box">
-									<div class="name">黄老师</div>
-									<div class="job">高级瑜伽导师</div>
-								</div>
-							</div>
-						</div>
-					</div>
-							{{ else if index == 1}}
-							<span></span>
-							{{ else if index == 2}}
-							<div class="swiper-slide">
-								<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
-								<div class="teacher_box">
-									<div class="name">{{value.Name}}</div>
-									<div class="job">{{value.Appellation}}</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				      {{/if}}
-					{{/each}}
+								{{if data.TeacherInfo}}
+								{{each data.TeacherInfo  value  index}}
+								<div class="swiper-slide">
+										<div class="swiper_left" style="background-image: url({{value.Headportrait}});"></div>
+										<div class="teacher_box">
+											<div class="name">{{value.Name}}</div>
+											<div class="job">{{value.Appellation}}</div> 
+										</div>
+									</div>
+										{{/each}}
 					    {{else}}
 					   <li></li>
 					{{/if}}
+					</div>
+					</div>
 					<table class="teacher_table">
 						<tr>
 							<td  >

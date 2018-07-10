@@ -16,7 +16,7 @@ function getUrlParam(name) {
 } 
 var partner = getUrlParam("id");
 var type = getUrlParam("type");
-
+ 
 $(document).ready(function() {
   $.ajax({
     type: "post",

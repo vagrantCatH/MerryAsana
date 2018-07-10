@@ -96,9 +96,6 @@ function getUserBaseInfo() {
         var phone = this.registerForm.phone;
         var code = this.registerForm.code;
         //				var pw = this.registerForm.password//密码参数  暂时无用
-        //              console.log(phone)
-        //              console.log(code)
-        //              console.log(partner)
         var phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;
 
         if (!phone) {

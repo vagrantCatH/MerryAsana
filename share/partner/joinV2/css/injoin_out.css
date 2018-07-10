@@ -384,3 +384,12 @@ input::-webkit-inner-spin-button {
 .width {
   width: 3rem;
 }
+.asd{
+  width: 1.8rem;
+  margin: 0 auto;
+  font-size: 0.15rem;
+  cursor: pointer;
+  margin-top: -.4rem;
+  position: relative;
+  top: 1.96rem;
+}

@@ -4,11 +4,13 @@
 	margin: 0 auto;
 	background-size:100% 100%;  
 	background-attachment: fixed;
+	margin-bottom: 20px;
 }
 .main-container>img{
 	width: 100%;
 	height: 100%;
-	margin-bottom: -.4rem;
+	margin-bottom: -15px;
+	
 }
 .xian{
 	margin-top: -10px;

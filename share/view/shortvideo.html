@@ -5,81 +5,103 @@
      <meta name="viewport"   content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
      <title>视频分享页</title>
      <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.7.0/skins/default/aliplayer-min.css" />
-     <link rel="stylesheet" href="../css/video.css" />
+     <link rel="stylesheet" href="../css/video.css?v=07061156" />
+     <link rel="stylesheet" href="../css/lib/font-awesome.min.css?v=07061156" />
      <script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.7.0/aliplayer-h5-min.js"></script>
-     <script type="text/javascript" src="../js/lib/jquery.js"></script>
+     <script type="text/javascript" src="../js/lib/jquery.js?v=07061156"></script>
     </head>
     <body>
-     <!-- <script id="tmp" type="text/html">  -->
-		<!-- 头 -->
+        
+		<!-- 头 --> 
 		<div class="top-container" >
 			<div class="left">
 				我家瑜伽&nbsp;Home&nbsp;Yoga
-			</div>
+			</div> 
 				<div class="right" id="xiazai">
 				下载APP
 			</div>
         </div>
-        <div class="control">
-            <div  class="prism-player ab" id="J_prismPlayer" style="position: absolute"></div>
+        <div class="control clearfloat">
+            <div  class="prism-player ab clearfloat" id="J_prismPlayer" style="position: relative"></div>
+        </div>
+        <!-- <div class="shipinxx clearfloat"></div> -->
             <div class="abc"> 
                 <img  class="left1"src="../img/u=291184781,1179952589&fm=200&gp=0.jpg" alt="">
-                <div class="sname">小小小小小小小小~结巴</div>
-                <div class="right2">+关注</div> 
+                <div class="sname"></div> 
+                <div class="right2" id="xiazai1">+关注</div> 
             </div>
-            <div class="dier"></div>
-        </div>
-       
+            <div class="baog">
+                    <script id="tmp" type="text/html">
+                    <div class="dier">
+                            <div class="pen">
+                                    <img class="icon" src="../img/video/pen_icon.png" alt="">
+                            </div>
+                            <div class="email">
+                                    <img class="icon" src="../img/video/email_icon.png" alt="">
+                            </div>
+                            <div class="email">
+                                    <img class="icon" src="../img/video/fx_icon.png" alt="">
+                            </div>
+                            <div class="email">
+                                    <img class="icon" src="../img/video/good_icon.png" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="clearboth"></div> --> 
+                            <div class="message clearboth">
+                                    <div class="content">{{data.YogaVod.Content}}</div>
+                                    <div class="time"></div>
+                                    <div class="gray"></div>
+                                 </div>
+                            {{if  data.VodCommentInfo == null}}
+                            <span></span>
+                            {{else if data.VodCommentInfo !== null}}
+                            {{each data.VodCommentInfo   value  index}}
+                        {{if value.ReplyUserInfo.UserId == 0}}  
+                        <div class="reply">
+                                {{if value.VodComment.ConsumerPhoto == "?x-oss-process=style/head"}}
+                                <div class="avater" style="background-image: url(../img/touxiang_icon@2x.png);"> </div>
+                                {{else if value.VodComment.ConsumerPhoto !== "?x-oss-process=style/head"}}
+                                <div class="avater" style="background-image: url({{value.VodComment.ConsumerPhoto}});"> </div>
+                                {{/if}}
+                              <div class="avater_left">{{value.VodComment.ConsumerName}}</div>
+                              <i class="fa fa-thumbs-o-up abs" id="xiazai2"></i>
+                              <div class="size clearboth">{{value.VodComment.Praise}}</div>
+                              <div class="comments clearfloat">{{value.VodComment.Content}}</div>
+                              <div class="timeo">{{value.VodComment.start}}</div>
+                              <div class="huif">回复</div>
+                        </div> 
+                        <div class="clearboth"></div>
+                        <div class="solid clearfloat"></div>    
+                        {{else if value.ReplyUserInfo.UserId !== 0}} 
+                        <span></span> 
+                        <div class="reply">
+                            {{if value.VodComment.ConsumerPhoto == "?x-oss-process=style/head"}}
+                                <div class="avater" style="background-image: url(../img/touxiang_icon@2x.png);"> </div>
+                                {{else if value.VodComment.ConsumerPhoto !== "?x-oss-process=style/head"}}
+                                <div class="avater" style="background-image: url({{value.VodComment.ConsumerPhoto}});"> </div>
+                                {{/if}}
+                            <div class="avater_left">{{value.VodComment.ConsumerName}}</div>
+                            <i class="fa fa-thumbs-o-up abs"  id="xiazai2"></i>
+                            <div class="size clearfloat">{{value.VodComment.Praise}}</div>
+                            <div class="comments clearfloat">回复<span class="namea">{{value.ReplyUserInfo.UserName}}</span>:{{value.VodComment.Content}}</div>
+                            <div class="timeo">{{value.ReplyUserInfo.start}}</div>
+                            <div class="huif">回复</div>
+                      </div> 
+                      <div class="solid"></div>  
+                      {{/if}}
+					{{/each}}
+					    {{else}}
+					   <span>GG</span>
+					{{/if}}
+                    </script>
+            </div>
+            <div class="bottom_container">
+                    <div class="public_title" id="gengduo1">
+                        更多视频
+                    </div>
     </body>
-    <script>
-$(document).ready(function(){
-    $.ajax({
-       type:'get',
-       url:'http://test.wojiayujia.cn/v1/vod/aliyun/auth',
-       data:{},
-       dataType:'json',
-       success:function(info){
-           var str = JSON.parse(info.data)
-           console.log(str)
-           var AccessKeySecret = str.Credentials.AccessKeySecret;
-           var AccessKeyId = str.Credentials.AccessKeyId;
-           var SecurityToken = str.Credentials.SecurityToken;
-           console.log(AccessKeySecret)
- 
-    var player = new Aliplayer({
-        id: 'J_prismPlayer',
-        width: '100%',
-        height:'98%',
-        x5_video_position:"top",
-        playsinline:!0,
-        x5_type:true,
-        autoplay:!0,
-        // x5_video_position:top,
-        //支持播放地址播放,此播放优先级最高
-        // source : '播放url',
-        //播放方式二：点播用户推荐
-        // vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
-        // playauth : '',
-        // cover: 'http://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png',            
-        // 播放方式三：仅MPS用户使用
-        // vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
-        // accId: '',
-        // accSecret: '',
-        // stsToken: '',
-        // domainRegion: '',
-        // authInfo: '',
-        //播放方式四：使用STS方式播放
-        vid : '45a21a0edc4a4bcd82c7ba171ac1e45d',
-        accessKeyId: AccessKeyId,
-        securityToken: SecurityToken,
-        accessKeySecret: AccessKeySecret,
-        },function(player){
-            console.log('播放器创建好了。')
-       });
-       }
-       });
-    });
-    </script>
+    <script type="text/javascript" src="../js/shortvideo.js?v=07061156" ></script>
+    <script type="text/javascript" src="../js/lib/template.js?v=07061156" ></script>
 </html>
 
 

@@ -7,15 +7,22 @@ function getUrlParam(name) {
 var partner = getUrlParam("id");
 var type = getUrlParam("type");
 
+var model = 1;
+function cardurl() {
+  var str = "http://test.wojiayujia.cn";
+  var abc = "http://back2.wojiayujia.cn";
+    return model == 1 ? str : abc;
+}
+
 $(document).ready(function() {
   $.ajax({
     type: "post",
-    url: "/v1/user/pk/info",
-    data: { id: partner },
+    url: cardurl()+"/v1/user/pk/info",
+    data: { id: 7 },
     dataType: "json",
     success: function(info) {
       console.log(info);
-      var data = info.data;
+      var data = info.data; 
 
       var startArr = [];
 

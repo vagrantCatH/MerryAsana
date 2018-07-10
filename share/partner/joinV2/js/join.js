@@ -14,7 +14,7 @@ var partner = getUrlParam("id");
 // var type = getUrlParam("type");
 var checkC = getUrlParam("check");
 var checkFlag = true;
-var model = 1;
+var model = 2;
 
 function cardurl() {
   var str = "http://test.wojiayujia.cn";
@@ -39,7 +39,7 @@ function laye(data){
     title: "提示",
     content: data,
     btn: "确定"
-  });
+  }); 
 }
 
 function getUserBaseInfo() {
@@ -97,7 +97,7 @@ function getUserBaseInfo() {
         }
         if (!phoneReg.test(phone)) {
           laye("输入正确手机号");
-          return;
+          return; 
         }
         if (checkFlag == false) {
           return;
@@ -173,6 +173,7 @@ function getUserBaseInfo() {
         }).then(function(response) {
           var res = response.data;
           var rescode = res.code;
+          console.log(rescode+"rescode")
           if (res.code == res.code) {
             layer.open({
               title: "提示",
@@ -186,7 +187,8 @@ function getUserBaseInfo() {
                check:checkC
               }
             }).then(function(response){
-              console.log(response)
+              $(".bottom-btn").css("display", "none");
+              $(".asd").css("display", "block");
             })
           }
         });
@@ -242,15 +244,17 @@ function getUserBaseInfo() {
          var data = response.data.data
          console.log(data)
          if(data == true){
-        
+           var res = 1;
+           $(".asd").css("display", "none");
          }else{
           $(".mask").css("display", "none");
           layer.open({
             title: "提示",
-            content: "分享卡已使用，请向小馆主重新获取链接",
+            content: "此链接分享卡已被领用，请向馆主重新获取分享卡链接",
             btn: "确定"
-          });
-          $(".bottom-btn").css("display", "none");
+          }); 
+           $(".bottom-btn").css("display", "none");
+           $(".asd").css("display", "block");
          }
         });
       }
